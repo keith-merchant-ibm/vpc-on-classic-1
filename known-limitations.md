@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-13"
+lastupdated: "2020-05-21"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -28,7 +28,7 @@ This document contains a summary of features and APIs that are not supported, fe
 ## Summary of features not supported
 {: #summary-of-features-not-supported}
 
-* Direct Link on Classic access to VPC is supported through [**Classic Access**](/docs/vpc-on-classic?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc) only. [Direct Link (release 2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) does not have this limitation. 
+* Direct Link on Classic access to VPC is supported through [**Classic Access**](/docs/vpc-on-classic?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc) only. [Direct Link (release 2.0)](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) does not have this limitation.
 * Although a subset of Private Service Endpoints are available to VPC, not all endpoints are available. See [Service endpoints available for IBM Cloud VPC](/docs/vpc-on-classic?topic=vpc-on-classic-service-endpoints-available-for-ibm-cloud-vpc) for services that are available.
 * Saving and restoring images is not supported.
 * {{site.data.keyword.cloud_notm}} VPCs are regional, therefore a VPC from one region cannot connect to a VPC in another region unless they are "classic access" enabled, or connected by means of a VPN connection. See [**Classic Access**](/docs/vpc-on-classic?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc).
@@ -43,10 +43,9 @@ This section lists more details of unsupported features and use cases, categoriz
 
 * {{site.data.keyword.vpc_short}} does not support multicast or broadcast domains.
 * {{site.data.keyword.vpc_short}} does not provide end-to-end encryption.
-* A VPC cannot be peered with other VPCs. While it is possible to connect VPCs
-  with either VPN Gateways or Floating IPs, there is no automatic route
-  advertisement between the two VPCs. Static routes must be used in each VPC
-  to enable layer 3 connectivity between the two VPCs. See [How to use a VPN Gateway to connect two VPCs](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc#vpn-example) for how you can achieve VPC-to-VPC connectivity.
+* A VPC cannot be peered with other VPCs natively. It is possible to connect VPCs utilizing VPN gateways, floating IPs, or {{site.data.keyword.cloud_notm}} Transit Gateway.
+    - With both VPN gateways and floating IPs, there is no automatic route advertisement between the two VPCs. Static routes must be used in each VPC to enable Layer-3 connectivity between the two VPCs. See [Using VPN with your VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc#vpn-example) for how to achieve VPC-to-VPC connectivity using this method.
+    - With Transit Gateway, it advertises the root subnets of each VPC, allowing traffic to be routed without the use of static routes. For more information, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started).
 * Cloud Service Endpoints are not supported by VPC. See [Service endpoints available for IBM Cloud VPC](/docs/vpc-on-classic?topic=vpc-on-classic-service-endpoints-available-for-ibm-cloud-vpc) for services that are available.
 
 ### Compute
@@ -72,4 +71,3 @@ This section lists more details of unsupported features and use cases, categoriz
 * {{site.data.keyword.vpc_short}} comes with its own Network as a Service tools such as LBaaS, ACLs, and security groups. You cannot use your own network appliances (for example, a Vyatta Gateway or other load balancer) to control any resource in the VPC. Similarily, you cannot use your own load balancer or security groups services in {{site.data.keyword.cloud_notm}} Classic Infrastructure to control resources in the {{site.data.keyword.vpc_short}}.
 * The public gateway does not allow the traffic to be initiated from the Internet to a VSI in the IBM Cloud VPC. For that purpose, a Floating IP must be used.
 * ACL is stateless, so return traffic must be allowed explicitly in ACL rules.
-
