@@ -111,7 +111,7 @@ Use [IBM Cloud Virtual Servers for Virtual Private Cloud](/docs/vpc-on-classic-v
 
 When you provision an {{site.data.keyword.cloud_notm}} Virtual Servers for Virtual Private Cloud instance, a 100 GB, general purpose IOPS (3 IOPS/GB) block storage volume is created automatically, as a primary boot volume, and attached to the instance. You can create block storage volumes when you provision a virtual server instance in a VPC network, or create new volumes independent of the VSI lifecycle.
 
-When provisioning additional block storage for your VPC, you can select an [IOPS tier](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#tiers) for your block storage volume, or specify  a [custom IOPS profile](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
+When provisioning additional block storage for your VPC, you can select an [IOPS tier](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#tiers-gen1) for your block storage volume, or specify  a [custom IOPS profile](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#custom-gen1).
 
 ## Designed for cloud-native and hybrid workloads
 {: #designed-for-cloud-native-and-hybrid-workloads}

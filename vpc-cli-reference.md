@@ -43,7 +43,7 @@ The commands are organized into the following sections. Similar commands to exec
 ## Prerequisites
 {: #cli-prerequisites}
 
-1. Install the [IBM Cloud CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli).
+1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 2. Install or update the `vpc-infrastructure` plug-in.
 
   ```
@@ -1139,7 +1139,7 @@ The priority of the policy can have a range of 1 to 10, where a lower value indi
 - `ibmcloud is load-balancer-listener-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 443 http --policies '[{"name": "my-policy", "priority": 5, "action": "reject" }]'`
 
 When the action is "forward", the pool identity is required to specify which pool the load balancer forwards the traffic to.
-   
+
 - `ibmcloud is load-balancer-listener-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 443 http --policies '[{"priority": 5, "action": "forward", "target": { "id": 70294e14-4e61-11e8-bcf4-0242ac110004 }}]'`
 
 When the action is "redirect", the "url" and "http_status_code" are required. Possible values for "http_status_code" are 301, 302, 303, 307, or 308. The "url" is the redirect target URL.
@@ -1149,7 +1149,7 @@ When the action is "redirect", the "url" and "http_status_code" are required. Po
 Possible values for "condition" are contains, equals, or matches_regex. Possible values for "type" are header, hostname, or path. The "field" is an HTTP header field which is only applicable to "header" rule type. The "value" parameter is the value to be matched for rule condition.
 
 - `ibmcloud is load-balancer-listener-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 443 http --policies '[{"priority": 5, "action": "reject", "rules": { "condition": "equals", "type": "header", "field": "My-app-header", "value": "value"}}]'`
-   
+
 - `ibmcloud is load-balancer-listener-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 443 http --json`
 
 ---

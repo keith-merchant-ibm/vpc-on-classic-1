@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-04-07"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -1352,7 +1352,7 @@ When creating a volume, the IOPS value specified in the request must be a positi
 ## volume_name_duplicate
 **Message**: The volume name is a duplicate. Volume name `<volume_name>` provided in the request already exists, where `<volume_name>` is the provided volume name.
 
-The volume name specified in the request already exists in the VPC infrastructure. Provide a different name for the volume. For more information about volume naming, refer to [the volume naming guidelines](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage#volume-name-conventions).
+The volume name specified in the request already exists in the VPC infrastructure. Provide a different name for the volume. For more information about volume naming, refer to [the volume naming guidelines](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-managing-block-storage-gen1#volume-name-conventions-gen1).
 
 ## volume_name_invalid
 **Message**: The volume name specified in the request is not valid.
@@ -1382,27 +1382,27 @@ Contact [customer support](/docs/vpc-on-classic?topic=vpc-on-classic-getting-hel
 ## volume_profile_capacity_iops_invalid
 **Message**: The volume profile specified in the request is not valid for the provided capacity and/or IOPS.
 
-The volume capacity and/or IOPS value that you specified in the request is not allowed by the volume profile. See the documentation for valid minimum and maximum capacity and IOPS values for a [Custom profile](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles#custom).
+The volume capacity and/or IOPS value that you specified in the request is not allowed by the volume profile. See the documentation for valid minimum and maximum capacity and IOPS values for a [Custom profile](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#custom-gen1).
 
 ## volume_profile_invalid
 **Message**: The volume profile in the request is not valid.
 
-The volume profile is missing in the request. Provide one of the following volume profiles in the request: `general-purpose`, `5iops-tier`, `10iops-tier`, and `custom`. See the documentation for more information about [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles).
+The volume profile is missing in the request. Provide one of the following volume profiles in the request: `general-purpose`, `5iops-tier`, `10iops-tier`, and `custom`. For more information, see [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1).
 
 ## volume_profile_iops_invalid
 **Message**: The volume profile specified in the request cannot accept custom IOPS.
 
-Your volume profile does not accept a Custom IOPS value. You might have specified a Tiered IOPS profile, which does not require that you specify an IOPS value. If you want to provide a specific IOPS value, use the Custom IOPS profile. For more information, see [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles).
+Your volume profile does not accept a Custom IOPS value. You might have specified a Tiered IOPS profile, which does not require that you specify an IOPS value. If you want to provide a specific IOPS value, use the Custom IOPS profile. For more information, see [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1).
 
 ## volume_profile_name_missing
 **Message**: The required volume profile name is missing in the request.
 
-The volume profile name is missing in the request body when creating a volume or in the request parameter when getting a volume. Provide a volume profile name in your request and try again. These are: `general-purpose`, `5iops-tier`, `10iops-tier`, and `custom`. See the documentation for more information about [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles).
+The volume profile name is missing in the request body when creating a volume or in the request parameter when getting a volume. Provide a volume profile name in your request and try again. These are: `general-purpose`, `5iops-tier`, `10iops-tier`, and `custom`. See the documentation for more information about [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1).
 
 ## volume_profile_not_found
 **Message**: A volume profile with the specified name is not found.
 
-A volume profile with that name could not be found. Verify that you provided the correct volume profile name. These are: `general-purpose`, `5iops-tier`, `10iops-tier`, and `custom`. See the documentation for more information about [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles).
+A volume profile with that name could not be found. Verify that you provided the correct volume profile name. These are: `general-purpose`, `5iops-tier`, `10iops-tier`, and `custom`. See the documentation for more information about [{{site.data.keyword.block_storage_is_short}} profiles](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1).
 
 ## volume_quota_reached
 **Message**: The volume quota has been reached.

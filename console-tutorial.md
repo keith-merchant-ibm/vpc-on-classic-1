@@ -180,7 +180,7 @@ To create and attach a block storage volume:
   * **Location**: Select a location for the block storage volume. The location consists of a region and a zone, for example US South 1.
   * **Size**: Specify the size of the volume between 10 GBs and 2000 GBs.
   * **IOPs**: Select one of the IOPs Tiers or click Custom to enter an IOPs value based on volume size.
-  * **Encryption**: Accept the default Provider managed encryption or select Customer managed and use your own encryption key. This step requires provisioning a Key Protect service instance and creating or importing a root key. For more information, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption#data-vol-encryption-ui).
+  * **Encryption**: Accept the default Provider managed encryption or select Customer managed and use your own encryption key. This step requires provisioning a Key Protect service instance and creating or importing a root key. For more information, see [Creating block storage volumes with customer managed encryption](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-encryption).
 1. Click **Create volume**.
 1. In the list of block storage volumes, find the volume that you created. When the status is Available, click "..." and select **Attach to instance**.
 1. Select the instance to which you want to attach the volume and click **Attach**.

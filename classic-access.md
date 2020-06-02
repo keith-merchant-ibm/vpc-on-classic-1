@@ -21,11 +21,11 @@ subcollection: vpc-on-classic
 {:DomainName: data-hd-keyref="DomainName"}
 {:external: target="_blank" .external}
 
-# Setting up access to your Classic Infrastructure from VPC
+# Setting up access to your Classic infrastructure from VPC
 {: #setting-up-access-to-your-classic-infrastructure-from-vpc}
 [comment]: # (linked help topic)
 
-You may set up access to your {{site.data.keyword.cloud}} Classic Infrastructure, including Direct Link connectivity, from one VPC in each region. These special "Classic Access VPCs" use the same routing capability (implicit router) as your {{site.data.keyword.cloud}} classic infrastructure. Readers are expected to be familiar with Classic Infrastructure networking.
+You can set up access to your {{site.data.keyword.cloud}} Classic infrastructure, including Direct Link connectivity, from one VPC in each region. These special "Classic Access VPCs" use the same routing capability (implicit router) as your {{site.data.keyword.cloud}} classic infrastructure. Readers are expected to be familiar with Classic Infrastructure networking.
 
 When you've set up a VPC for classic access, every compute host (VSI or Bare Metal) without a public interface in your classic account can send and receive packets to and from the classic access VPC. However, remember that firewalls, gateways, Network ACLs, or security groups can filter this traffic. As a best practice, we recommend that you allow only the traffic that's required for your applications to function properly.
 
@@ -145,5 +145,5 @@ Migration is completed by the {{site.data.keyword.cloud_notm}} Network Engineeri
 * Only one VPC per region, per account can be enabled for Classic Access.
 * If your classic infrastructure includes an imported default route from Direct Link, the imported default route is used by your Classic Access VPC. In this scenario, the public gateway and floating IPs in your Classic Access VPC will not provide internet access. Once the default route is no longer imported via Direct Link, then public gateways and floating IPs will once again provide internet access.
 
-Depending on the OS you've installed on your classic VSIs or bare metal servers, your configuration procedure will vary. For more information, see [About public virtual servers](/docs/vsi?topic=virtual-servers-about-public-virtual-servers).
+Depending on the OS you've installed on your classic VSIs or bare metal servers, your configuration procedure will vary. For more information, see [About public virtual servers](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers).
 {: note}

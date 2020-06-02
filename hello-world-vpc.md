@@ -34,7 +34,7 @@ Newer generation available. For more information, see [Creating a VPC using the 
 ## Prerequisites:
 {: #cli-pre-requisites}
 
-1. Install the [IBM Cloud CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli).
+1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
 2. Install or update the `vpc-infrastructure` plug-in to the IBM Cloud CLI.
 
@@ -455,7 +455,7 @@ ibmcloud is volume-profiles
 {: pre}
 
 Profiles can be general-purpose (3 IOPS/GB), 5iops-tier, 10-iops-tier, and custom.
-See [About Block Storage for VPC](//docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-capacity-performance)
+See [About Block Storage for VPC](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-capacity-performance-gen1)
 for information about volume capacity and IOPS ranges based on the volume profile you select.  
 
 ```

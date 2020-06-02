@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-04-02"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -74,7 +74,7 @@ This scenario covers the basic steps needed to give an existing user in your acc
    * From the **What type of access do you want to assign?** list, select **All Identity and Access enabled services** for all IAM-enabled services.
    * In the adjacent **in** field, select **All resource groups**.
    * In the **Platform access** select at least **Viewer** to allow the user to create new resources in a resource group. It can be set to **No access** if you do not want to allow the user to create new resources. See [Roles required to manage VPC resources](/docs/vpc-on-classic?topic=vpc-on-classic-resource-authorizations-required-for-api-and-cli-calls) to determine which permissions are needed.
-   * In the **Service access** area, select **All resource types** to give the user access to all [VPC resource types](/docs/vpc-on-classic?topic=vpc-on-classic-about-vpc-infrastructure-resources). 
+   * In the **Service access** area, select **All resource types** to give the user access to all [VPC resource types](/docs/vpc-on-classic?topic=vpc-on-classic-about-vpc-infrastructure-resources).
 6. Scroll to the end of the page and click **Add**.
 
 ## Team access scenario
@@ -161,4 +161,4 @@ The two example teams are now set up to use VPCs. At this point, members of the 
 ## Related links
 {: #related-links}
 
-- Learn how to [Managing IAM access, API keys, service IDs, and access groups using the CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam).
+- Learn how to [Managing IAM access, API keys, service IDs, and access groups using the CLI](/docs/cli?topic=cli-ibmcloud_commands_iam).

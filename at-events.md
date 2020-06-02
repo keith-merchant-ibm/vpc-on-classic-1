@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2020-05-12"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -28,7 +28,7 @@ subcollection: vpc-on-classic
 Use the {{site.data.keyword.at_full}} service to track how your users and applications interact with the {{site.data.keyword.cloud}} Virtual Private Cloud (VPC) in the {{site.data.keyword.cloud}}.
 {:shortdesc}
 
-The {{site.data.keyword.at_full}} service records user-initiated activities to change the state of a service in the {{site.data.keyword.cloud}}. For more information, see [{{site.data.keyword.at_full}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+The {{site.data.keyword.at_full}} service records user-initiated activities to change the state of a service in the {{site.data.keyword.cloud}}. For more information, see [{{site.data.keyword.at_full}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started#getting-started).
 
 ## List of events: Network resources
 {: #events-volumes}
@@ -118,7 +118,7 @@ The following table lists the actions related to storage resources and the gener
 | volume  | is.volume.volume.delete  | Volume was deleted  |
 | volume  | is.volume.volume.read    | One or more volumes were retrieved  |
 
-An event will not contain a volume name if there was no information available at the time of the event. For example, when you make a request to create a volume but do not provide a volume name, the information will not be available and will not appear in the event. 
+An event will not contain a volume name if there was no information available at the time of the event. For example, when you make a request to create a volume but do not provide a volume name, the information will not be available and will not appear in the event.
 {:note}
 
 ## List of events: Load balancers

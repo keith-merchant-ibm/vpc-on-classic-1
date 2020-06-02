@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-13"
+lastupdated: "2020-05-12"
 
 keywords:
 
@@ -25,7 +25,7 @@ subcollection: vpc-on-classic
 
 # Getting started with Virtual Private Cloud (Gen 1 compute)
 {: #getting-started}
-{: help} 
+{: help}
 {: support}
 [comment]: # (linked help topic)
 
@@ -67,4 +67,4 @@ If you're ready to dig in, go directly to the detailed documentation about **Net
 
 * [**Networking for Virtual Private Cloud**](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-getting-started)
 * [**Virtual Servers for Virtual Private Cloud**](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-getting-started)
-* [**Block Storage for Virtual Private Cloud**](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-getting-started)
+* [**Block Storage for Virtual Private Cloud**](/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-getting-started-gen1)
