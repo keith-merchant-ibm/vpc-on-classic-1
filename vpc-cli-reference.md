@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-06-03"
 
 keywords:
 
@@ -88,7 +88,7 @@ ibmcloud is target [--gen 2 | 1] [--json]
 #### Command options
 {: #ibmbcloud-is-target-command-options}
 
-- **--gen**: Generation of compute resources. Default is '2'. You must set the value to '1' to access generation 1 resources.
+- **--gen**: Generation of compute resources (default: **2**). You must set the value to **1** to access generation 1 resources.
 - **--json**: Format output in JSON.
 
 #### Examples
@@ -239,7 +239,7 @@ ibmcloud is image-create IMAGE_NAME --file IMAGE_FILE_LOCATION --os-name OPERATI
 
 - `ibmcloud is image-create My-ubuntu-16-amd64 --file cos://us-south/custom-image-vpc-bucket/customImage-0.vhd --os-name ubuntu-16-amd64`
 - `ibmcloud is image-create My-ubuntu-16-amd64 --file cos://us-south/custom-image-vpc-bucket/customImage-0.vhd --os-name ubuntu-16-amd64 --resource-group-id fee82deba12e4c0fb69c3b09d1f12345`
-- `ibmcloud is image-create My-ubuntu-16-amd64 --file cos://us-south/custom-image-vpc-bucket/customImage-0.vhd --os-name ubuntu-16-amd64 --resource-group-name default`
+- `ibmcloud is image-create My-ubuntu-16-amd64 --file cos://us-south/custom-image-vpc-bucket/customImage-0.vhd --os-name ubuntu-16-amd64 --resource-group-name Default`
 - `ibmcloud is image-create My-ubuntu-16-amd64 --file cos://us-south/custom-image-vpc-bucket/customImage-0.vhd --os-name ubuntu-16-amd64 --json`
 
 ---
@@ -774,7 +774,7 @@ ibmcloud is instance-volume-attachment-add NAME INSTANCE VOLUME [--auto-delete f
 - **NAME**: Name of the volume attachment.
 - **INSTANCE**: ID of the instance.
 - **VOLUME**: ID of the volume.
-- **--auto-delete**: The attached volume will be deleted when deleting the instance, default is false.
+- **--auto-delete**: The attached volume is deleted when deleting the instance. (default: **false**).
 - **--json**: Format output in JSON.
 
 #### Examples
@@ -819,7 +819,7 @@ ibmcloud is instance-volume-attachment-update INSTANCE VOLUME_ATTACHMENT [--name
 - **INSTANCE**: ID of the instance.
 - **VOLUME_ATTACHMENT**: ID of the volume attachment.
 - **--name**: New name of the volume.
-- **--auto-delete**: The attached volume is deleted when deleting the instance, default is `false`.
+- **--auto-delete**: The attached volume is deleted when deleting the instance.
 - **--json**: Format output in JSON.
 
 #### Examples
@@ -1024,7 +1024,7 @@ ibmcloud is load-balancer-create LOAD_BALANCER_NAME LOAD_BALANCER_TYPE (--subnet
 
 - `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e`
 - `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --resource-group-id fee82deba12e4c0fb69c3b09d1f12345`
-- `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --resource-group-name default`
+- `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --resource-group-name Default`
 - `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --json`
 
 ---
@@ -1111,7 +1111,7 @@ ibmcloud is load-balancer-listener LOAD_BALANCER_ID LISTENER_ID [--json]
 Create a load balancer listener.
 
 ```
-ibmcloud is load-balancer-listener-create LOAD_BALANCER_ID PORT PROTOCOL [--certificate-instance-crn CERTIFICATE_INSTANCE_CRN] [--connection-limit LIMIT] [--default-pool DEFAULT_POOL_ID] [--policies LISTENER_POLICIES_JSON | @LISTENER_POLICIES_JSON_FILE] [--json]
+ibmcloud is load-balancer-listener-create LOAD_BALANCER_ID PORT PROTOCOL [--default-pool DEFAULT_POOL_ID] [--connection-limit LIMIT] [--certificate-instance-crn CERTIFICATE_INSTANCE_CRN] [--policies LISTENER_POLICIES_JSON | @LISTENER_POLICIES_JSON_FILE] [--json]
 ```
 
 #### Command options
@@ -1120,9 +1120,9 @@ ibmcloud is load-balancer-listener-create LOAD_BALANCER_ID PORT PROTOCOL [--cert
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **PORT**: The listener port number. Range 1-65535.
 - **PROTOCOL**: The listener protocol. Enumeration type: **http**, **https**, **tcp**.
+- **--default-pool**: ID of the default pool.
 - **--certificate-instance-crn**: CRN of the certificate instance. Required when protocol is https.
 - **--connection-limit**: The connection limit of the listener.
-- **--default-pool**: ID of the default pool.
 - **--policies**: **LISTENER_POLICIES_JSON** | **@LISTENER_POLICIES_JSON_FILE**, listener policies in JSON or JSON file.
 - **--json**: Format output in JSON.
 
@@ -1178,7 +1178,7 @@ ibmcloud is load-balancer-listener-delete LOAD_BALANCER_ID LISTENER_ID [-f, --fo
 Update a load balancer listener.
 
 ```
-ibmcloud is load-balancer-listener-update LOAD_BALANCER_ID LISTENER_ID [--certificate-instance-crn CERTIFICATE_INSTANCE_CRN] [--connection-limit LIMIT] [--default-pool DEFAULT_POOL_ID] [--protocol http | https | tcp] [--port PORT] [--json]
+ibmcloud is load-balancer-listener-update LOAD_BALANCER_ID LISTENER_ID [--protocol http | https | tcp] [--port PORT] [--default-pool DEFAULT_POOL_ID] [--connection-limit LIMIT] [--certificate-instance-crn CERTIFICATE_INSTANCE_CRN] [--json]
 ```
 
 #### Command options
@@ -1186,10 +1186,10 @@ ibmcloud is load-balancer-listener-update LOAD_BALANCER_ID LISTENER_ID [--certif
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
-- **--certificate-instance-crn**: CRN of the certificate instance. Required when protocol is **https**.
-- **--connection-limit**: The connection limit of the listener.
-- **--default-pool**: ID of the default pool.
 - **--protocol**: The listener protocol. Enumeration type: **http**, **https**, **tcp**.
+- **--default-pool**: ID of the default pool.
+- **--connection-limit**: The connection limit of the listener.
+- **--certificate-instance-crn**: CRN of the certificate instance. Required when protocol is **https**.
 - **--port**: The listener port number. Range 1-65535.
 - **--json**: Format output in JSON.
 
@@ -2279,7 +2279,7 @@ ibmcloud is security-group-create GROUP_NAME VPC [--resource-group-id RESOURCE_G
 
 - `ibmcloud is security-group-create my-security-group 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3`
 - `ibmcloud is security-group-create my-security-group 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3 --resource-group-id fee82deba12e4c0fb69c3b09d1f12345`
-- `ibmcloud is security-group-create my-security-group 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3 --resource-group-name default`
+- `ibmcloud is security-group-create my-security-group 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3 --resource-group-name Default`
 - `ibmcloud is security-group-create my-security-group 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3 --json`
 
 ---
@@ -2450,7 +2450,7 @@ ibmcloud is security-group-rule-add GROUP DIRECTION PROTOCOL [--remote REMOTE_AD
 - **GROUP**: ID of the security group.
 - **DIRECTION**: Direction of traffic to enforce. Enumeration type: **inbound**, **outbound**.
 - **PROTOCOL**: Protocol to enforce. Enumeration type: **all**, **icmp**, **tcp**, **udp**.
-- **--remote**: The set of network interfaces from which this rule allows traffic, Can be specified as either an **REMOTE_ADDRESS**, **CIDR_BLOCK** and **SECURITY_GROUP_ID**. If unspecified, then traffic will be allowed from any source (or to any source, for outbound rules).
+- **--remote**: The set of network interfaces from which this rule allows traffic, Can be specified as either an **REMOTE_ADDRESS**, **CIDR_BLOCK** and **SECURITY_GROUP_ID**. If unspecified, then traffic is allowed from any source (or to any source, for outbound rules).
 - **--icmp-type**: ICMP traffic type to allow. Valid values from **0** to **254**. This option is specified only when protocol is set to **icmp**. If unspecified, all types are allowed.
 - **--icmp-code**: ICMP traffic code to allow. Valid values from **0** to **255**. This option is specified only when protocol is set to **icmp**. If unspecified, all codes are allowed.
 - **--port-min**: Minimum port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp**. If unspecified, all ports are allowed (default: **1**).
@@ -2482,7 +2482,7 @@ ibmcloud is security-group-rule-update GROUP RULE_ID [--direction inbound | outb
 - **GROUP**: ID of the security group.
 - **RULE_ID**: ID of the security group rule.
 - **--direction**: Direction of traffic to enforce. Enumeration type: **inbound**, **outbound**.
-- **--remote**: The set of network interfaces from which this rule allows traffic, Can be specified as either an **REMOTE_ADDRESS**, **CIDR_BLOCK** and **SECURITY_GROUP_ID**. If unspecified, then traffic will be allowed from any source (or to any source, for outbound rules).
+- **--remote**: The set of network interfaces from which this rule allows traffic, Can be specified as either an **REMOTE_ADDRESS**, **CIDR_BLOCK** and **SECURITY_GROUP_ID**. If unspecified, then traffic is allowed from any source (or to any source, for outbound rules).
 - **--icmp-type**: ICMP traffic type to allow. Valid values from **0** to **254**. This option is specified only when protocol is set to **icmp**. If unspecified, all types are allowed.
 - **--icmp-code**: ICMP traffic code to allow. Valid values from **0** to **255**. This option is specified only when protocol is set to **icmp**. If unspecified, all codes are allowed.
 - **--port-min**: Minimum port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp**. If unspecified, all ports are allowed (default: **1**).
@@ -2573,8 +2573,8 @@ ibmcloud is vpc-create VPC_NAME [--classic-access] [--address-prefix-management 
 {: #vpc-create-command-options}
 
 - **VPC_NAME**: Name of the VPC.
-- **--classic-access**: This flag indicates whether the VPC should be connected to Classic Infrastructure. The default value is **false**.
-- **--address-prefix-management**: This flag indicates whether a default address prefix should be automatically created for each zone in this VPC. Enumeration type: **auto**, **manual**. If **manual**, this VPC is created with no default address prefixes. If unspecified, default is **auto**.
+- **--classic-access**: This flag indicates whether the VPC should be connected to Classic Infrastructure (default: **false**).
+- **--address-prefix-management**: This flag indicates whether a default address prefix should be automatically created for each zone in this VPC. Enumeration type: **auto**, **manual**. If 'manual', this VPC is created with no default address prefixes (default: **auto**).
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--json**: Format output in JSON.
@@ -2585,7 +2585,7 @@ ibmcloud is vpc-create VPC_NAME [--classic-access] [--address-prefix-management 
 - `ibmcloud is vpc-create my-vpc --classic-access`
 - `ibmcloud is vpc-create my-vpc --address-prefix-management auto`
 - `ibmcloud is vpc-create my-vpc --resource-group-id fee82deba12e4c0fb69c3b09d1f12345`
-- `ibmcloud is vpc-create my-vpc --resource-group-name default --json`
+- `ibmcloud is vpc-create my-vpc --resource-group-name Default --json`
 
 ---
 
@@ -2680,7 +2680,7 @@ ibmcloud is vpc-address-prefix-create PREFIX_NAME VPC ZONE_NAME CIDR [--default 
 - **VPC**: ID of the VPC.
 - **ZONE_NAME**: Name of the zone.
 - **CIDR**: The CIDR block for this prefix.
-- **--default**: This flag indicates whether this is the default prefix for this zone in this VPC. Enumeration type: **true**, **false**. If unspecified, the default is **false**.
+- **--default**: This flag indicates whether this is the default prefix for this zone in this VPC. Enumeration type: **false**, **true**. (default: **false**).
 - **--json**: Format output in JSON.
 
 #### Example
@@ -2723,7 +2723,7 @@ ibmcloud is vpc-address-prefix-update VPC PREFIX [--name NEW_NAME] [--default fa
 - **VPC**: ID of the VPC.
 - **PREFIX**: ID of the VPC address prefix.
 - **--name**: New name of the address prefix.
-- **--default**: This flag indicates whether this is the default prefix for this zone in this VPC. Enumeration type: **true**, **false**. If unspecified, the default is **false**.
+- **--default**: This flag indicates whether this is the default prefix for this zone in this VPC. Enumeration type: **false**, **true**.
 - **--json**: Format output in JSON.
 
 #### Example
@@ -3006,7 +3006,7 @@ ibmcloud is ike-policy-create IKE_POLICY_NAME AUTHENTICATION_ALGORITHM DH_GROUP 
 
 - `ibmcloud is ike-policy-create my-ike-policy md5 2 aes128 2`
 - `ibmcloud is ike-policy-create my-ike-policy md5 2 aes128 2 --key-lifetime 28000`
-- `ibmcloud is ike-policy-create my-ike-policy md5 2 aes128 2 --resource-group-name default`
+- `ibmcloud is ike-policy-create my-ike-policy md5 2 aes128 2 --resource-group-name Default`
 - `ibmcloud is ike-policy-create my-ike-policy md5 2 aes128 2 --resource-group-id fee82deba12e4c0fb69c3b09d1f12345 --json`
 
 ---
@@ -3143,7 +3143,7 @@ ibmcloud is ipsec-policy-create IPSEC_POLICY_NAME AUTHENTICATION_ALGORITHM ENCRY
 
 - `ibmcloud is ipsec-policy-create my-ipsec-policy md5 aes128 group_2`
 - `ibmcloud is ipsec-policy-create my-ipsec-policy md5 aes128 group_2 --key-lifetime 3600`
-- `ibmcloud is ipsec-policy-create my-ipsec-policy md5 aes128 group_2 --resource-group-name default`
+- `ibmcloud is ipsec-policy-create my-ipsec-policy md5 aes128 group_2 --resource-group-name Default`
 - `ibmcloud is ipsec-policy-create my-ipsec-policy md5 aes128 group_2 --resource-group-id fee82deba12e4c0fb69c3b09d1f12345 --json`
 
 ---
@@ -3273,7 +3273,7 @@ ibmcloud is vpn-gateway-create VPN_GATEWAY_NAME SUBNET [--resource-group-id RESO
 {: #vpn-gateway-create-examples}
 
 - `ibmcloud is vpn-gateway-create my-vpc-gateway fee82deba12e4c0fb69c3b09d1f12345`
-- `ibmcloud is vpn-gateway-create my-vpc-gateway fee82deba12e4c0fb69c3b09d1f12345 --resource-group-name default`
+- `ibmcloud is vpn-gateway-create my-vpc-gateway fee82deba12e4c0fb69c3b09d1f12345 --resource-group-name Default`
 - `ibmcloud is vpn-gateway-create my-vpc-gateway fee82deba12e4c0fb69c3b09d1f12345 --resource-group-id fee82deba12e4c0fb69c3b09d1f12345 --json`
 
 ---
@@ -3351,10 +3351,10 @@ ibmcloud is vpn-gateway-connection-create CONNECTION_NAME VPN_GATEWAY_ID PEER_AD
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
 - **PEER_ADDRESS**: The IP address of the peer VPN gateway.
 - **PRESHARED_KEY**: The preshared key.
-- **--admin-state-up**: If set to **false**, the VPN gateway connection is shut down. The default is **false**.
+- **--admin-state-up**: If set to **false**, the VPN gateway connection is shut down. (default: **true**).
 - **--dead-peer-detection-action**: Dead Peer Detection actions. Enumeration type: **restart**, **clear**, **hold**, **none**.
-- **--dead-peer-detection-interval**: Dead Peer Detection interval in seconds (default: **30**).
-- **--dead-peer-detection-timeout**: Dead Peer Detection timeout in seconds (default: **120**).
+- **--dead-peer-detection-interval**: Dead Peer Detection interval in seconds (default: **2**).
+- **--dead-peer-detection-timeout**: Dead Peer Detection timeout in seconds (default: **10**).
 - **--ike-policy**: ID of the IKE policy.
 - **--ipsec-policy**: ID of the IPsec policy.
 - **--local-cidr**: Local CIDR for the resource.
@@ -3423,10 +3423,10 @@ ibmcloud is vpn-gateway-connection-update VPN_GATEWAY_ID CONNECTION_ID [--admin-
 
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
 - **CONNECTION_ID**: ID of the VPN connection.
-- **--admin-state-up**: If set to false, the VPN gateway connection is shut down. The default is **false**.
+- **--admin-state-up**: If set to false, the VPN gateway connection is shut down.
 - **--dead-peer-detection-action**: Dead Peer Detection actions. Enumeration type: **restart**, **clear**, **hold**, **none**.
-- **--dead-peer-detection-interval**: Dead Peer Detection interval in seconds (default: **30**).
-- **--dead-peer-detection-timeout**: Dead Peer Detection timeout in seconds (default: **120**).
+- **--dead-peer-detection-interval**: Dead Peer Detection interval in seconds.
+- **--dead-peer-detection-timeout**: Dead Peer Detection timeout in seconds.
 - **--ike-policy**: ID of the IKE policy.
 - **--ipsec-policy**: ID of the IPsec policy.
 - **--peer-address**: The IP address of the peer VPN gateway.
@@ -3581,7 +3581,7 @@ ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACIT
 - **VOLUME_NAME**: Name of the volume.
 - **PROFILE_NAME**: Name of the profile.
 - **ZONE_NAME**: Name of the zone.
-- **--capacity**: Capacity of the volume in GB, from **10** to **2000**. Default to **100**.
+- **--capacity**: Capacity of the volume in GB, from **10** to **2000** (default: **100**).
 - **--iops**: Input/Output Operations Per Second for the volume.
 - **--encryption-key**: The CRN of the KeyProtect CRK used for this volume.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
@@ -3596,7 +3596,7 @@ ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACIT
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --iops 10000`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --encryption-key crn:v1:bluemix:public:kms:us-south:adffc98a0f1f0f95f6613b3b752286b87:e4a29d1a-2ef0-42a6-8fd2-350deb1c647e:key:5437653b-c4b1-447f-9646-b2a2a4cd6179`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --resource-group-id 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3`
-- `ibmcloud is volume-create my-volume general-purpose us-south-1 --resource-group-name default`
+- `ibmcloud is volume-create my-volume general-purpose us-south-1 --resource-group-name Default`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --json`
 
 ---
