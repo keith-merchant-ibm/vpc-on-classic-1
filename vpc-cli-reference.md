@@ -1146,7 +1146,7 @@ When the action is "redirect", the "url" and "http_status_code" are required. Po
 
 - `ibmcloud is load-balancer-listener-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 443 http --policies '[{"priority": 5, "action": "redirect", "target": { "http_status_code": 301, "url": "https://www.redirect.com"}}]'`
 
-Possible values for "condition" are contains, equals, or matches_regex. Possible values for "type" are header, hostname, or path. The "field" is an HTTP header field which is only applicable to "header" rule type. The "value" parameter is the value to be matched for rule condition.
+Possible values for "condition" are contains, equals, or matches_regex. Possible values for "type" are header, hostname, or path. The "field" is an HTTP header field which is only applicable to "header" rule type. The "value" parameter is the value to match the rule condition.
 
 - `ibmcloud is load-balancer-listener-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 443 http --policies '[{"priority": 5, "action": "reject", "rules": { "condition": "equals", "type": "header", "field": "My-app-header", "value": "value"}}]'`
 
@@ -1281,7 +1281,7 @@ When the action is "redirect", the "url" and "http_status_code" are required. Po
 
 - `ibmcloud is load-balancer-listener-policy-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3 --action redirect --priority 1 --target-http-status-code 301 --target-url "https://www.redirect.com"`
 
-Possible values for "condition" are contains, equals, or matches_regex. Possible values for "type" are header, hostname, or path. The "field" is an HTTP header field which is only applicable to "header" rule type. The "value" parameter is the value to be matched for rule condition.
+Possible values for "condition" are contains, equals, or matches_regex. Possible values for "type" are header, hostname, or path. The "field" is an HTTP header field which is only applicable to "header" rule type. The "value" parameter is the value to match the rule condition.
 
 - `ibmcloud is load-balancer-listener-policy-create 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3 --action reject --priority 4 --rules '[{"rules": { "condition": "equals", "type": "header", "field": "My-app-header", "value": "value"}}]'`
 
@@ -1403,7 +1403,7 @@ ibmcloud is load-balancer-listener-policy-rule-create LOAD_BALANCER_ID LISTENER_
 - **POLICY_ID**: ID of the policy.
 - **--condition**: The condition of the rule, enumeration type: **contains**, **equals**, **matches_regex**.
 - **--type**: The type of the rule, enumeration type: **header**, **hostname**, **path**.
-- **--value**: Value to be matched for rule condition.
+- **--value**: Value to match the rule condition.
 - **--field**: HTTP header field. This is only applicable to **header** rule type.
 - **--json**: Format output in JSON.
 
@@ -1432,7 +1432,7 @@ ibmcloud is load-balancer-listener-policy-rule-update LOAD_BALANCER_ID LISTENER_
 - **RULE_ID**: ID of the rule.
 - **--condition**: The condition of the rule, enumeration type: **contains**, **equals**, **matches_regex**.
 - **--type**: The type of the rule, enumeration type: **header**, **hostname**, **path**.
-- **--value**: Value to be matched for rule condition.
+- **--value**: Value to match the rule condition.
 - **--field**: HTTP header field. This is only applicable to **header** rule type.
 - **--json**: Format output in JSON.
 
