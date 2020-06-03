@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2020
 
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-02"
 
 keywords:
 
@@ -55,7 +55,7 @@ Invite an IBM Cloud user to your account so that they can view, create, and upda
 3. In the **Assign users additional access** section, select **IAM services** and complete the following information:
    * From the **What type of access do you want to assign?** list, select a specific service that you want to assign the users, or select **All Identity and Access enabled services** for all IAM-enabled services.
    * In the adjacent **in** field, select where you want this access granted. For example, select **Account**.
-   * In the **Regions** list, select a specific region to grant access, or keep **All regions** (default).
+   * In the **Regions** list, select a specific region to grant access, or keep **All regions**.
    * In the **Platform access** and **Service access** areas, select to apply one or more access levels.   
 4. Scroll to the end of the page and click **Add**.
 
@@ -72,8 +72,8 @@ This scenario covers the basic steps needed to give an existing user in your acc
 5. In the **Assign users additional access** section, select **IAM services** and complete the following information:
    * From the **What type of access do you want to assign?** list, select **All Identity and Access enabled services** for all IAM-enabled services.
    * In the adjacent **in** field, select **All resource groups**.
-   * If you want to grant access to a specific region, select it from the list; otherwise, keep **All regions** (default).
-   * In the **Platform access** area, select at least **Viewer** to allow the user to create new resources in a resource group. See [Roles required to manage VPC resources](/docs/vpc-on-classic?topic=vpc-on-classic-resource-authorizations-required-for-api-and-cli-calls) to determine which permissions are needed.
+   * If you want to grant access to a specific region, select it from the list; otherwise, keep **All regions**.
+   * In the **Platform access** area, select at least **Viewer** to allow the user to create new resources in a resource group.  It can be set to **No access** if you do not want to allow the user to create new resources.  See [Roles required to manage VPC resources](/docs/vpc-on-classic?topic=vpc-on-classic-resource-authorizations-required-for-api-and-cli-calls) to determine which permissions are needed.
    * In the **Service access** area, select at least **Reader** to give the user read access to [VPC resource types](/docs/vpc-on-classic?topic=vpc-on-classic-about-vpc-infrastructure-resources). YOu can click **View more** to select additional roles.
    * In the **Resource group access** area, select **Viewer**.
 6. Scroll to the end of the page and click **Add**.
@@ -127,17 +127,16 @@ Add the necessary VPC access policies for each access group. For example, add a 
 1. Navigate to the [IAM Group UI](https://{DomainName}/iam/groups){: external} in the IBM Cloud console.
 2. Select an access group. Let's start with the `test_team_manage_vpcs` access group.
 3. On the **Access policies** tab, click **Assign access**.
-4. Select **Assign access within a resource group**.
+4. Select **IAM services**, then select the type of access you want to assign. For example, select **All Identity and Access enabled services** for all IAM-enabled services.
 5. Select the corresponding resource group. In this case, select the `test_team` resource group. 
-6. Make sure that the **Assign access to a resource group** option remains set to **Viewer**.
-7. Select the service **Infrastructure Service**.
-8. Make sure that **Resource type** remains set to **All resource types**.
-9. In the **Assign platform access roles** area, select **Editor**.
-10. Select **Assign**.
+6. Make sure that the **Assign access to a resource group** option remains set to **Viewer**.  
+9. In the **Platform access** area, select **Editor**.
+10. In the **Service access** area, select **Writer**.
+11. Select **Assign**.
 
 Repeat the previous steps to add access policies for the remaining three access groups.
 
-The teams are now set up to use VPCs. Members of the test_team_manage_vpcs and production_team_manage_vpcs access groups can now create VPCs in their assigned resource groups (that is, in the test_team_manage_vpcs and production_team_manage_vpcs resource groups).
+The teams are now set up to use VPCs. Members of the `test_team_manage_vpcs` and `production_team_manage_vpcs` access groups can now create VPCs in their assigned resource groups (that is, in the `test_team_manage_vpcs` and `production_team_manage_vpcs` resource groups).
 
 When you create a VPC or other resources, make sure that you specify the resource group in which to create the resource. If you don't specify a resource group, the resource is created in the Default resource group.
 {: tip}
@@ -150,7 +149,7 @@ Now you can assign team members (users) to the appropriate access groups. Follow
 1. Navigate to the [IAM Group UI](https://{DomainName}/iam/groups){: external} in the IBM Cloud console.
 2. Select the wanted access group (start with: `test_team_manage_vpcs`).
 3. Under the **Users** tab, click **Add users**.
-4. Select each user you wish to add to the access group.
+4. Select each user that you want to add to the access group.
 5. Click **Add to group**.
 
 Repeat the previous steps to accomplish these tasks:
