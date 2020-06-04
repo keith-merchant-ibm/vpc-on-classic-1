@@ -1258,7 +1258,7 @@ ibmcloud is load-balancer-listener-policy-create LOAD_BALANCER_ID LISTENER_ID --
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
 - **--priority**: Priority of the policy. Lower value indicates higher priority, for example: **5**, range: [**1-10**].
-- **--action**: The policy action, one of [**forward**, **redirect**, **reject**].
+- **--action**: The policy action. Enumeration type: **forward**, **redirect**, **reject**.
 - **--name**: The new name of the policy.
 - **--target-id**: The unique identifier for this load balancer pool, specified with **forward** action.
 - **--target-http-status-code**: The http status code in the redirect response, one of [**301**, **302**, **303**, **307**, **308**], specified with **redirect** action.
@@ -1401,8 +1401,8 @@ ibmcloud is load-balancer-listener-policy-rule-create LOAD_BALANCER_ID LISTENER_
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID**: ID of the policy.
-- **--condition**: The condition of the rule, enumeration type: **contains**, **equals**, **matches_regex**.
-- **--type**: The type of the rule, enumeration type: **header**, **hostname**, **path**.
+- **--condition**: The condition of the rule. Enumeration type: **contains**, **equals**, **matches_regex**.
+- **--type**: The type of the rule. Enumeration type: **header**, **hostname**, **path**.
 - **--value**: Value to match the rule condition.
 - **--field**: HTTP header field. This is only applicable to **header** rule type.
 - **--json**: Format output in JSON.
@@ -1430,8 +1430,8 @@ ibmcloud is load-balancer-listener-policy-rule-update LOAD_BALANCER_ID LISTENER_
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID**: ID of the policy.
 - **RULE_ID**: ID of the rule.
-- **--condition**: The condition of the rule, enumeration type: **contains**, **equals**, **matches_regex**.
-- **--type**: The type of the rule, enumeration type: **header**, **hostname**, **path**.
+- **--condition**: The condition of the rule. Enumeration type: **contains**, **equals**, **matches_regex**.
+- **--type**: The type of the rule. Enumeration type: **header**, **hostname**, **path**.
 - **--value**: Value to match the rule condition.
 - **--field**: HTTP header field. This is only applicable to **header** rule type.
 - **--json**: Format output in JSON.
@@ -2537,7 +2537,7 @@ ibmcloud is vpcs [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name 
 
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--classic-access**: This flag lists VPCs that have classic access enabled. Enumeration type: **true**, **false**. If unspecified, it returns all VPCs with and without classic access enabled.
+- **--classic-access**: This flag lists VPCs that have classic access enabled. If unspecified, it returns all VPCs with and without classic access enabled. Enumeration type: **true**, **false**.
 - **--json**: Format output in JSON.
 
 ---
