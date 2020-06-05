@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018, 2019
-lastupdated: "2019-11-20"
+lastupdated: "2020-06-05"
 
 
 keywords:
@@ -95,10 +95,10 @@ rias_endpoint="https://us-south.iaas.cloud.ibm.com"
 
 To verify that this variable was saved, run `echo $rias_endpoint` and make sure the response is not empty.
 
-Every API request must include the `version` parameter, in the format `YYYY-MM-DD`. Run the following command to store the version date in a variable so it can be reused in your session. For more information about setting the `version` parameter, see **Versioning** in the [API Reference for VPC](https://{DomainName}/apidocs/vpc-on-classic#versioning){: external}
+Every API request must include the `version` parameter, in the format `YYYY-MM-DD`. Run the following command to store the version date in a variable so that it can be reused in your session. For more information about setting the `version` parameter, see **Versioning** in the [VPC API reference](https://{DomainName}/apidocs/vpc-on-classic#versioning){: external}
 
 ```bash
-version="2019-05-31"
+version="2020-06-02"
  ```
 {: pre}
 
