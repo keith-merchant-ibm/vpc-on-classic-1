@@ -152,7 +152,7 @@ The following example shows a Cloud Object Storage URI with a supported format: 
 
 Either remove the encryption keys, or specify an encrypted image in the image template and try again.
 
-## cos_image_encryted
+## cos_image_encrypted
 **Message**: No encryption key is specified in the image template, but the provided image is encrypted.
 
 Either specify the encryption keys, or specify an unencrypted image in the image template and try again.
