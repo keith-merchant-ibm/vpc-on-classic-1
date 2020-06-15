@@ -26,6 +26,20 @@ subcollection: vpc-on-classic
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
 
+## 12 June 2020
+{: #june-12-2020}
+
+**Updates to the UI**
+- VPN Gateway metrics are now available.
+- Expandable volumes are now supported in the UI.
+
+## 6 June 2020
+{: #june-06-2020}
+
+**Updates to the UI**
+- In the custom images list page, you can now view the key CRN. 
+- Clicking on the VPC Infrastructure menu item takes you to the overview page.
+
 ## 15 May 2020
 {: #may-15-2020}
 
