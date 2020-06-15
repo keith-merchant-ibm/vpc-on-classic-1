@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-02"
+lastupdated: "2020-06-05"
 
 keywords: 
 
@@ -78,7 +78,7 @@ ibmcloud is vpc-create my-access-vpc --classic-access
 Pass in the `classic_access` parameter when creating the VPC. For example,
 
 ```bash
-curl -X POST "$rias_endpoint/v1/vpcs?version=2019-05-31&generation=1" \
+curl -X POST "$rias_endpoint/v1/vpcs?version=$version&generation=1" \
   -H "Authorization: $iam_token" \
   -d '{
         "name": "my-access-vpc",
