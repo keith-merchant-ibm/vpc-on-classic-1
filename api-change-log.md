@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-10"
+lastupdated: "2020-06-05"
 
 keywords: 
 
@@ -46,11 +46,11 @@ The requirement to include the `generation=1` query parameter will be enforced f
 ## 2019-10-08
 {: #2019-10-08}
 
-The `3des` enumeration value encryption algorithms on IKE and IPsec policies has been changed to `triple_des` to improve compatibility with various programming environments. **Version 2019-10-08 or later required.**
+The `3des` enumeration value encryption algorithms on IKE and IPsec policies has been changed to `triple_des` to improve compatibility with various programming environments. **Version `2019-10-08` or later required.**
 
 ## 2019-09-17
 {: #2019-09-17}
 
-VPCs can be created without any default address prefixes by specifying the option `"address_prefix_management": "manual"` and default address prefixes can be deleted. **Version 2019-09-17 or later required.**
+VPCs can be created without any default address prefixes by specifying the option `"address_prefix_management": "manual"` and default address prefixes can be deleted. **Version `2019-09-17` or later required.**
 
 Learn about [designing an addressing plan for a VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-vpc-addressing-plan-design).
