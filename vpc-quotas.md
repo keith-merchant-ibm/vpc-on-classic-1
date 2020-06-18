@@ -60,6 +60,7 @@ Newer generation available. For more information, see [Quotas and service limits
 | SSH Keys | 100 per account |
 
 <sup>1</sup> You can request to increase the virtual server instances limit by submitting an [IBM Support](/docs/vpc-on-classic?topic=vpc-on-classic-getting-help-and-support) case. Consider other related resource limits that need to be increased, such as floating IPs. 
+
 <sup>2</sup> You can request to increase the floating IP limit by submitting an [IBM Support](/docs/vpc-on-classic?topic=vpc-on-classic-getting-help-and-support) case.
 
 ## Security groups quotas
