@@ -26,6 +26,14 @@ subcollection: vpc-on-classic
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
 
+## 19 June 2020
+{: #june-19-2020}
+
+**Updates to the UI**
+
+- On the VPN provision page, you can now create a subnet, instead of only being able to select a subnet from a table.
+- When you upgrade an IBM Cloud account, the **Upgrade** button now changes to **Upgrade pending**.
+
 ## 12 June 2020
 {: #june-12-2020}
 
@@ -37,7 +45,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #june-06-2020}
 
 **Updates to the UI**
-- In the custom images list page, you can now view the key CRN. 
+- In the custom images list page, you can now view the key CRN.
 - Clicking on the VPC Infrastructure menu item takes you to the overview page.
 
 ## 15 May 2020
