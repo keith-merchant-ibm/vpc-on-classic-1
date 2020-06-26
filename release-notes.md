@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-06-26"
 
 keywords:
 
@@ -25,6 +25,13 @@ subcollection: vpc-on-classic
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
+
+## 26 June 2020
+{: #june-26=2020}
+
+**Updates to the UI**
+
+- VPN gateway monitoring (with a monitoring preview and graphs) are now available.
 
 ## 19 June 2020
 {: #june-19-2020}
