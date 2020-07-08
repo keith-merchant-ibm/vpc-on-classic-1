@@ -12,11 +12,11 @@ Virtual Private Cloud (Gen 1 compute)
 
     {: .topicgroup}
     Tutorials
-        /tutorials/solution-tutorials-vpc-public-app-private-backend
-        /tutorials/solution-tutorials-vpc-multi-region
-        /tutorials/solution-tutorials-vpc-site2site-vpn
-        /tutorials/solution-tutorials-vpc-app-deploy
-        /tutorials/solution-tutorials-vpc-secure-management-bastion-server
+        /solution-tutorials/solution-tutorials-vpc-public-app-private-backend
+        /solution-tutorials/solution-tutorials-vpc-multi-region
+        /solution-tutorials/solution-tutorials-vpc-site2site-vpn
+        /solution-tutorials/solution-tutorials-vpc-app-deploy
+        /solution-tutorials/solution-tutorials-vpc-secure-management-bastion-server
         /containers/containers-vpc_ks_tutorial
 
     {: .topicgroup}
