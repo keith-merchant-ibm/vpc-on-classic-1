@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-26"
+lastupdated: "2020-07-17"
 
 keywords:
 
@@ -25,6 +25,20 @@ subcollection: vpc-on-classic
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
+
+## 17 July 2020
+{: #july-17-2020}
+
+**Update to Virtual Server Instance UI**
+
+* Itemized pricing estimate are now available on the New Virtual Server provisioning page.
+
+## 03 July 2020
+{: #july-03-2020}
+
+**Update to VPN for VPC**
+
+- You can now access VPN monitoring metrics using [IBM Cloud Monitoring with Sysdig](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-sysdig-monitoring-metrics).
 
 ## 26 June 2020
 {: #june-26=2020}
