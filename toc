@@ -56,6 +56,8 @@ Virtual Private Cloud (Gen 1 compute)
         delete-vpc-api.md
 
     connect-to-cos.md
+    vsi_migration_FAQs.md
+    vsi_migration_gen2.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
