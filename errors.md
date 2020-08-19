@@ -740,6 +740,11 @@ To find the existing CIDRs in subnets, run the API command  `GET /v1/subnets` to
 
 If you are using the CLI, run the command `ibmcloud is subnets` to list all the subnets for the VPC. Then, run the command `ibmcloud is subnet <subnet-id>` for each subnet in the VPC, and check for conflicts with the value of `IPv4 CIDR` in the CLI output.
 
+## new_account_provisioning_disabled
+**Message**: Provisioning of resources for accounts new to VPC are disabled for VPC Gen1. Please use VPC Gen2.
+
+Due to the end of life of VPC Gen 1, new accounts are not able to provision new resources and will see this error when doing so. Use VPC Gen 2 to provision new resources.
+
 ## not_authorized
 **Message**: The request is not authorized.
 
