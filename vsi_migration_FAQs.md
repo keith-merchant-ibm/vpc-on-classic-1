@@ -75,7 +75,7 @@ You can find your system configuration details by selecting your device from the
 
 Having difficulties?  Reach out to our [Client Success team](https://www.ibm.com/cloud/data-centers/?focusArea=WCP%20-%20Pooled%20CSM&contactmodule){: external}.
 
-![Migrating-Faqs.](images/vpc-migrate-determine-resources.svg){:caption="Figure 1. Determine Gen 1 resources to migrate" caption-side="bottom"}
+![Migrating-Faqs.](images/vpc-migrate-determine-resources.png){:caption="Figure 1. Determine Gen 1 resources to migrate" caption-side="bottom"}
 
 For more information, contact the [Client Success team](https://www.ibm.com/cloud/data-centers/?focusArea=WCP%20-%20Pooled%20CSM&contactmodule){: external}.
 
