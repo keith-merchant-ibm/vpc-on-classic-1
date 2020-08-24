@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-20"
 
 keywords:
 subcollection: vpc-on-classic
@@ -25,17 +25,16 @@ subcollection: vpc-on-classic
 This topic is a guide for migrating your VPC (Gen 1) infrastructure to VPC (Gen 2), which is required by end of year, 2020. For more information on why you are being asked to migrate, refer to [About Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs).
 
 IBM has a vendor available, at no cost, to help you with your migration process. Contact your IBM representative for more information on this service.
+{: tip}
 
 If you decide to complete this migration without assistance, use this topic as a guide.
 
 ## Before you begin
 {: #migrating-before}
-Refer to the following topics to understand the differences between VPC Gen 1 and Gen 2 environments.
+Refer to the following topics for information on the benefits of migrating and the differences between VPC Gen 1 and Gen 2 environments:
 
-* [Gen 1 infrastructure overview](/docs/vpc-on-classic?topic=vpc-on-classic-about)
-* [Gen 2 infrastructure overview](/docs/vpc?topic=vpc-about-vpc)
-* [Gen 1 quotas and limits](/docs/vpc?topic=vpc-quotas)
-* [Gen 2 quotas and limits](/docs/vpc-on-classic?topic=vpc-on-classic-quotas)
+* [About Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs)
+* [Gen 1 and Gen 2 Quota and Limit Comparisons](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-quotas-limits) 
 * [Pricing for VPC Gen 1 and Gen 2](https://www.ibm.com/cloud/vpc/pricing){: external}
 
 ## Step 1: Gather information about your current Gen 1 environment
@@ -289,7 +288,7 @@ If you have multiple VPN gateways, complete the following steps for each instanc
 ### Secondary volumes
 {: #migrating-vpc-secondary-volumes-params}
 
-If you have multiple volumes attached to an instance, the following steps for each volume.
+If you have multiple volumes that are attached to an instance, the following steps for each volume.
 
 |Parameter|Sub-parameters and Notes|
 |--|--|

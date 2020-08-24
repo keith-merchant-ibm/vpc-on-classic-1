@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-20"
 
 keywords:
 subcollection: vpc-on-classic
@@ -22,20 +22,28 @@ subcollection: vpc-on-classic
 # About Migrating from VPC (Gen 1) to VPC (Gen 2)
 {: #migrating-faqs}
 
-To continue bringing you the best service, hardware, and connectivity, IBM infrastructure is continually evaluated to ensure that it meets your networking, throughput, and redundancy requirements.  The IBM Gen 1 environment, while robust, is an excellent stepping-stone to the more advanced features available in our Gen 2 environment, including the following benefits.
+To continue bringing you the best service, hardware, and connectivity, IBM infrastructure is continually evaluated to ensure that it meets your networking, throughput, and redundancy requirements. The IBM Gen 1 environment, while robust, is an excellent stepping-stone to the more advanced features available in our Gen 2 environment.  
+
+This topic includes answers to commonly asked questions about migrating from VPC (Gen 1) to VPC (Gen 2).
+
+## What are the benefits of migrating from Gen 1 to Gen 2?
+{: #migrating-faqs-benefits}
+
+While Gen 1 and Gen 2 have many of the same features and functions, Gen 2 provides these additional benefits:
 
 * 5X faster virtual server processing
 * Up to 80 Gbps network performance on virtual server profiles
-* The latest Auto Scaling and Network Flow Logs
+* Block storage is larger in Gen 2
+* Quotas and limits are increased for some features in Gen 2; see [Gen 1 and Gen 2 Quota and Limit Comparisons](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-quotas-limits) for details
+* All new features, including Auto Scaling and Network Flow Logs, are being developed for Gen 2 only
 
-This topic includes answers to commonly asked questions about migrating from VPC (Gen 1) to VPC (Gen 2).
 
 ## When do I need to be fully migrated?
 {: #migrating-faqs-when}
 
-Migrations must be completed by the end of 2020.  The fastest way to do this is to use a vendor that IBM has engaged who will work with you to provide a migration path specific to your infrastructure.  Contact your IBM representative for more information.
+Migrations must be completed by the end of 2020. The fastest way to do this is to use a vendor that IBM has engaged who will work with you to provide a migration path specific to your infrastructure. Contact your IBM representative for more information.
 
-You can also choose to perform this migration with your own resources following the steps in our docs. If you choose to complete this migration, refer to [Instructions for Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-vpc).
+You can also choose to perform this migration with your own resources by following the steps in our docs. If you choose to complete this migration, refer to [Instructions for Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-vpc).
 
 ## Will I need to migrate my resources in the future (subsequent to this migration)?
 {: #migrating-faqs-migrate-again}
@@ -106,7 +114,7 @@ ibmcloud is instances
 
 Your new servers come with new primary IP subnets. Your current IP addresses cannot be transferred. If you need more IP addresses, you can request those directly from the console. Indicate that you are migrating your resources to a new data center.
 
-* For more information about VPC subnets, see [Bring your own subnet](https://cloud.ibm.com/docs/vpc?topic=vpc-configuring-address-prefixes).
+* For more information about VPC subnets, see [Bring your own subnet](/docs/vpc?topic=vpc-configuring-address-prefixes).
 * For more information about classic infrastructure subnets, see [Getting started with subnets and IPs](/docs/subnets?topic=subnets-getting-started).
 
 ## I am currently using an IBM Kubernetes service (IKS).  How does that fit into this migration?  
