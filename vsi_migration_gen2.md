@@ -179,6 +179,19 @@ Refer to:
 [Load balancers overview](/docs/vpc?topic=vpc-nlb-vs-elb)
 
 
+## Step 10: Considerations for related services
+{: #migrating-other-services}
+You will also need to migrate other related services that you are using, such as:
+* IAM Authorizations
+* Links or references to KMS (Key Protect/HPCS).
+* Kubernetes instances that are tied to your VPC
+* CIS tied to VPC load balancer
+* VPN
+* Custom images
+* Terraform templates
+* Shell scripts
+
+
 ## Reference: all VPC Gen 2 configuration parameters
 {: #gen-2-parameters}
 
