@@ -22,7 +22,7 @@ subcollection: vpc-on-classic
 # Instructions for Migrating from VPC (Gen 1) to VPC (Gen 2)
 {: #migrating-vpc}
 
-This topic is a guide for migrating your VPC (Gen 1) infrastructure to VPC (Gen 2), which is required by end of year, 2020. For more information on why you are being asked to migrate, refer to [About Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs).
+This topic is a guide for migrating your VPC (Gen 1) infrastructure to VPC (Gen 2). For more information on this migration, refer to [About Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs).
 
 IBM has a vendor available, at no cost, to help you with your migration process. Contact your IBM representative for more information on this service.
 {: tip}
@@ -34,7 +34,7 @@ If you decide to complete this migration without assistance, use this topic as a
 Refer to the following topics for information on the benefits of migrating and the differences between VPC Gen 1 and Gen 2 environments:
 
 * [About Migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs)
-* [Gen 1 and Gen 2 Quota and Limit Comparisons](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-quotas-limits) 
+* [Gen 1 and Gen 2 Quota and Limit Comparisons](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-quotas-limits)
 * [Pricing for VPC Gen 1 and Gen 2](https://www.ibm.com/cloud/vpc/pricing){: external}
 
 ## Step 1: Gather information about your current Gen 1 environment
