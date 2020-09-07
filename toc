@@ -6,9 +6,10 @@ Virtual Private Cloud (Gen 1 compute)
 
     {: .navgroup id="learn"}
     getting-started.md
-    about-vpc-is.md    
+    about-vpc-is.md
     [Pricing](https://www.ibm.com/cloud/vpc/pricing)
-    vpc-quotas.md 
+    vpc-quotas.md     
+    vsi_migration_quota_compare.md
 
     {: .topicgroup}
     Tutorials
