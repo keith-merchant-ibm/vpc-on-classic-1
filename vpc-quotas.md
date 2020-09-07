@@ -59,7 +59,7 @@ Newer generation available. For more information, see [Quotas and service limits
 | Floating IP addresses | 100 per zone per account <sup>2</sup> |
 | SSH Keys | 100 per account |
 
-<sup>1</sup> You can request to increase the virtual server instances limit by submitting an [IBM Support](/docs/vpc-on-classic?topic=vpc-on-classic-getting-help-and-support) case. Consider other related resource limits that need to be increased, such as floating IPs.
+<sup>1</sup> You can request to increase the virtual server instances limit by submitting an [IBM Support](/docs/vpc-on-classic?topic=vpc-on-classic-getting-help-and-support) case. Consider other related resource limits that need to be increased, such as floating IPs. 
 
 <sup>2</sup> You can request to increase the floating IP limit by submitting an [IBM Support](/docs/vpc-on-classic?topic=vpc-on-classic-getting-help-and-support) case.
 
@@ -115,8 +115,8 @@ Here are the current load balancer resource quotas:
 ### Block storage volumes
 {: #block-storage-quotas}
 
-|Resource|Quota|
-|--------|-----|
+|Resource|Quota| 
+|--------|-----| 
 | Boot and secondary volumes | 300 total volumes per account in a region<sup>1</sup> |  
 | Secondary volumes per instance, when creating an instance |  4 secondary volumes |
 | Secondary volumes per instance, for existing instances with fewer than 4 cores | 4 secondary volumes |

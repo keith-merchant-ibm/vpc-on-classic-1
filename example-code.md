@@ -41,7 +41,7 @@ Newer generation available. For more information, see [Using the REST APIs to cr
 
    If you do not have a public SSH key or if you forgot the password of an existing one, generate a new one by running the `ssh-keygen` command (in Linux or macOS servers) and following the prompts. For Windows operating systems, you can use a tool like PuTTYgen to generate an SSH key.
 
-2.  Make sure you have an API key for your IBM Cloud account. If you don't have an API key, see [Creating an API key](/docs/iam?topic=iam-userapikey#create_user_key). You must store this API key in an environment variable in Step 1.
+2.  Make sure you have an API key for your IBM Cloud account. If you don't have an API key, see [Creating an API key](/docs/account?topic=account-userapikey#create_user_key). You must store this API key in an environment variable in Step 1.
 
 ## Step 1: Store your API Key as a variable
 {: #step-1}
@@ -56,7 +56,7 @@ apikey="<YOUR_API_KEY>"
 ## Step 2: Get an IBM Identity and Access Management (IAM) token
 {: #step-2}
 
-Refer to the [Getting an IBM Cloud IAM token by using an API key](/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey) topic on how to get an IAM token or use the following example commands.
+Refer to the [Getting an IBM Cloud IAM token by using an API key](/docs/account?topic=account-iamtoken_from_apikey#iamtoken_from_apikey) topic on how to get an IAM token or use the following example commands.
 
 Run the following command to get and parse an IAM token using the utility `jq`. You can modify the command to use another parsing tool, or you can remove the last part of the command if you prefer to parse the token yourself, manually.
 

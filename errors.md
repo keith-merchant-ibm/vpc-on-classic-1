@@ -74,7 +74,7 @@ One or more subnets are using the address prefix.  To determine which subnets ar
 
 A backend cloud service that is used by VPC failed to respond. VPC uses multiple IBM Cloud services, such as:
 
-- [Identity and Asset Management](/docs/iam?topic=iam-iamoverview) (IAM)
+- [Identity and Asset Management](/docs/account?topic=account-iamoverview) (IAM)
 - [Global Catalog](https://{DomainName}/catalog){: external}
 - Resource Controller
 - Resource Manager
@@ -123,7 +123,7 @@ Even though the import image file name has a **.qcow2** extension, the contents 
 ## cos_not_authorized
 **Message**: You are not authorized to access the Cloud Object Storage resource.
 
-This error occurs if a user tries to import an image from a Cloud Object Storage to which they do not have access. Use the [Granting access between services](/docs/iam?topic=iam-serviceauth){: external} to help you grant authorization from the image service to the Cloud Object Storage bucket.
+This error occurs if a user tries to import an image from a Cloud Object Storage to which they do not have access. Use the [Granting access between services](/docs/account?topic=account-serviceauth){: external} to help you grant authorization from the image service to the Cloud Object Storage bucket.
 
 ## cos_not_found
 **Message**: Cloud Object Storage resource not found.

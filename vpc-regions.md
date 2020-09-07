@@ -4,7 +4,7 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-02-28"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -33,12 +33,12 @@ Virtual Private Cloud is deployed to these {{site.data.keyword.cloud}} multi-zon
 
 |   Location     | Region | API Endpoint |
 | ------- | :------: | :------: |
-| Dallas | us-south | `us-south.iaas.cloud.ibm.com`| 
-| Frankfurt | eu-de | `eu-de.iaas.cloud.ibm.com`| 
-| Tokyo | jp-tok | `jp-tok.iaas.cloud.ibm.com`| 
-| London | eu-gb | `eu-gb.iaas.cloud.ibm.com`| 
-| Sydney | au-syd | `au-syd.iaas.cloud.ibm.com`| 
-| Washington DC | us-east | `us-east.iaas.cloud.ibm.com`| 
+| Dallas | us-south | `us-south.iaas.cloud.ibm.com`|
+| Frankfurt | eu-de | `eu-de.iaas.cloud.ibm.com`|
+| Tokyo | jp-tok | `jp-tok.iaas.cloud.ibm.com`|
+| London | eu-gb | `eu-gb.iaas.cloud.ibm.com`|
+| Sydney | au-syd | `au-syd.iaas.cloud.ibm.com`|
+| Washington DC | us-east | `us-east.iaas.cloud.ibm.com`|
 
 The Regional API (VPC) endpoint is automatically set by the IBM Cloud CLI when you log in to a specific region.
 {: note}
@@ -146,7 +146,7 @@ ibmcloud is regions
 For example, to get the list of VPCs in the `us-south` region, run the following command:
 
 ```
-curl "https://us-south.iaas.cloud.ibm.com/v1/vpcs?version=2019-05-31&generation=1" -H "Authorization: $iam_token"
+curl "https://us-south.iaas.cloud.ibm.com/v1/vpcs?version=$version&generation=1" -H "Authorization: $iam_token"
 ```
 {: pre}
 

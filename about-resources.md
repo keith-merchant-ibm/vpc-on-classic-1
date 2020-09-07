@@ -5,7 +5,7 @@ copyright:
 
 lastupdated: "2019-11-27"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -25,7 +25,7 @@ subcollection: vpc-on-classic
 # About VPC infrastructure resources
 {: #about-vpc-infrastructure-resources}
 
-{{site.data.keyword.vpc_full}} uses [{{site.data.keyword.iamlong}}](/docs/iam?topic=iam-iamoverview) (IAM) for identity and access management. The service is called `Infrastructure Service` and contains resource types as described in the following table. An access control level of `itself` means the resource has its own individual policies that can be applied.
+{{site.data.keyword.vpc_full}} uses [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) (IAM) for identity and access management. The service is called `Infrastructure Service` and contains resource types as described in the following table. An access control level of `itself` means the resource has its own individual policies that can be applied.
 
 Not all VPC resources are controlled by individual resource level access control policies. Some resources inherit the access control from the account or parent VPC.
 {: important}
@@ -73,9 +73,9 @@ A resource group is a collection of resources that is associated to establish au
 Use the search CLI to display tags attached to a resource. Use filters to display only the instances you care about, such as `ibmcloud resource search name:` or `ibmcloud resource search 'service_name:is AND type:vpc'`.
 {: tip}
 
-Large enterprises may want to divide a VPC into resource groups. Smaller companies may not need to divide their VPC into resource groups, because all of their team would be using the entire VPC. Learn more about [Working with resources](/docs/resources?topic=resources-resource).
+Large enterprises may want to divide a VPC into resource groups. Smaller companies may not need to divide their VPC into resource groups, because all of their team would be using the entire VPC. Learn more about [Working with resources](/docs/account?topic=account-manage_resource).
 
-Not all VPC resources can be assigned to a resource group. See the [table above](#about-vpc-infrastructure-resources) for specifics. In addition, assignment of a resource to a resource group can be done ONLY when you create it. Resources cannot change resource groups after they are created.
+Not all VPC resources can be assigned to a resource group. See this [table](#about-vpc-infrastructure-resources) for specifics. In addition, assignment of a resource to a resource group can be done ONLY when you create it. Resources cannot change resource groups after they are created.
 {: important}
 
 Defining resource groups requires advance planning. Before you set up your {{site.data.keyword.cloud_notm}} VPC, know how you'll assign the resources and the users in your organization to each resource group.
