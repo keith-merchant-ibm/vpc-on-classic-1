@@ -29,8 +29,8 @@ subcollection: vpc-on-classic
 {: support}
 [comment]: # (linked help topic)
 
-Newer generation available. For more information, see [Getting started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started) for generation 2 compute resources.
-{:important}
+As IBM continues to invest and innovate on the IBM Cloud Virtual Private Cloud (gen 2 compute) infrastructure, we're focusing on delivering maximum value in a single VPC Infrastructure platform. To support this effort, generation 1 compute infrastructure is being deprecated. The end of service date is 26 February 2021. For more information, see the [Start your migration](https://www.ibm.com/cloud/blog/announcements/start-your-vpc-gen1-to-vpc-gen2-migration){:external} blog.
+{:deprecated}
 
 To get started with {{site.data.keyword.vpc_full}} (Gen 1 compute):
 
@@ -40,7 +40,10 @@ To get started with {{site.data.keyword.vpc_full}} (Gen 1 compute):
 4. Select the profiles of virtual server instances (VSIs) you'd like to run, and instantiate them.
 5. Reserve a floating IP address, and associate it with a virtual server instance if you want to reach it from the internet.
 5. Deploy your service or applications across the virtual server instances.
-
+ 
+Explore our latest generation of compute resources. For more information, see [Getting started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
+{:important}
+ 
 ## Before you begin
 {: #prerequisites}
 
