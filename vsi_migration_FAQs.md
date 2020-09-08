@@ -19,7 +19,7 @@ subcollection: vpc-on-classic
 {:important: .important}
 {:table: .aria-labeledby="caption"}
 
-# About Migrating from VPC (Gen 1) to VPC (Gen 2)
+# About migrating from VPC (Gen 1) to VPC (Gen 2)
 {: #migrating-faqs}
 
 To continue bringing you the best service, hardware, and connectivity, IBM infrastructure is continually evaluated to ensure that it meets your networking, throughput, and redundancy requirements. The IBM Gen 1 environment, while robust, is an excellent stepping-stone to the more advanced features available in our Gen 2 environment.  
@@ -35,7 +35,7 @@ While Gen 1 and Gen 2 have many of the same features and functions, Gen 2 provid
 * Up to 80 Gbps network performance on virtual server profiles
 * Block storage is larger in Gen 2
 * Quotas and limits are increased for some features in Gen 2; see [Gen 1 and Gen 2 Quota and Limit Comparisons](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-quotas-limits) for details
-* All new features, including Auto Scaling and Network Flow Logs, are being developed for Gen 2 only
+* All new features, including Auto Scaling and Flow Logs for VPC, are being developed for Gen 2 only.
 
 
 ## When do I need to be fully migrated?

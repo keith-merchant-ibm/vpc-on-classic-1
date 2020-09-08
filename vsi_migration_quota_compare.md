@@ -19,7 +19,7 @@ subcollection: vpc-on-classic
 {:important: .important}
 {:table: .aria-labeledby="caption"}
 
-# Gen 1 and Gen 2 Quota and Limit Comparisons
+# Gen 1 and Gen 2 quota and limit comparisons
 {: #migrating-quotas-limits}
 
 These tables list the {{site.data.keyword.cloud}} Virtual Private Cloud resources and their Gen 1 and Gen 2 quotas and limits.

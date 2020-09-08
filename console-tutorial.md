@@ -293,7 +293,7 @@ To create a load balancer:
     * **Name**: Enter a name for the load balancer, such as `my-load-balancer`.
     * **Virtual private cloud**: Select your VPC.
     * **Resource group**: Select a resource group for the load balancer.
-    * **Tags**: (Optional) Enter tags to help you organize and find your resources. You can add more tags later. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+    * **Tags**: (Optional) Enter tags to help you organize and find your resources. You can add more tags later. For more information, see [Working with tags](/docs/account?topic=account-tag).
     * **Type**: Select the load balancer type.
       * A public load balancer has a public IP address, which means that it can route requests from clients over the internet.
       * A private load balancer has a private IP address, which means that it is accessible only to internal clients on your private subnets, within the same region and VPC.

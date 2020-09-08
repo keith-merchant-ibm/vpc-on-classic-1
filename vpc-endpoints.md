@@ -72,4 +72,4 @@ Cloud service endpoints are services provided by other cloud users. They will be
 
 ## Access to service endpoints using VPN
 
-You can also use VPN for VPC to access service endpoints, see [Build SE connectivity using VPN](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc#build-se-connectivity-using-vpn) for more details and [Services that support service endpoints](/docs/account?topic=account-vrf-service-endpoint#services-support-service-endpoints) for the list of services that support service endpoints.
+You can also use VPN for VPC to access service endpoints, see [Build SE connectivity using VPN](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc#build-se-connectivity-using-vpn) for more details and [Using service endpoints](/docs/account?topic=account-vrf-service-endpoint#use-service-endpoint) for the list of services that support service endpoints.

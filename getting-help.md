@@ -6,7 +6,7 @@ copyright:
   years: 2017, 2020
 lastupdated: "2020-04-01"
 
-keywords: 
+keywords:
 
 subcollection: vpc-on-classic
 
@@ -31,7 +31,7 @@ If you have problems or questions when using {{site.data.keyword.cloud}} Virtual
 
 If you have technical questions about the IBM Virtual Private Cloud, post your question on [Stack Overflow](https://stackoverflow.com/search?q=vpc+ibm-cloud){: external} and tag your question with "vpc" and "ibm-cloud".
 
-For information about opening an IBM Support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support).
+For information about opening an IBM Support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-using-avatar).
 
 When opening a case, if given a choice of technical category, select the component under the `VPC` (Virtual Private Cloud) category:
 
