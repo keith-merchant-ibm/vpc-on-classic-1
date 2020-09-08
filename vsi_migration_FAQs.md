@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-20"
+lastupdated: "2020-09-01"
 
 keywords:
 subcollection: vpc-on-classic
@@ -58,25 +58,15 @@ Gen 1 and Gen 2 have major feature-function parity. There is an edge case. If yo
 ## How do I select which site to deploy to?
 {: #migrating-faqs-select}
 
+All sites available in VPC Gen 1 are available in VPC Gen 2. 
+
 The following factors might influence which data centers you select:
 
 * Proximity to the users of the systems
 * Proximity to any other systems that this server needs to communicate with
 * Any data policies or regulations that require data to be stored in a specific location
 
-The following table gives you comparable VPC Gen 2 sites:
-
-|VPC Gen 1|VPC Gen 2|
-|-----|-----|
-|us-south-1 (Dallas 1)<br>us-south-2 (Dallas 2)<br>us-south-3 (Dallas 3)|us-south-1 (Dallas 1)<br>us-south-2 (Dallas 2)<br>us-south-3 (Dallas 3)|
-|eu-de-1 (Frankfurt 1)<br>eu-de-2 (Frankfurt 2)<br>eu-de-3 (Frankfurt 3)|eu-de-1 (Frankfurt 1)<br>eu-de-2 (Frankfurt 2)<br>eu-de-3 (Frankfurt 3)|
-|us-east-1 (Washington DC 1)<br>us-east-2 (Washington DC 2)<br>us-east-3 (Washington DC 3)|us-east-1 (Washington DC 1)<br>us-east-2 (Washington DC 2)<br>us-east-3 (Washington DC 3)|
-|eu-gb-1 (London 1)<br>eu-gb-2 (London 2)<br>eu-gb-3 (London 3)|eu-gb-1 (London 1)<br>eu-gb-2 (London 2)<br>eu-gb-3 (London 3)|
-|jp-tok-1 (Tokyo 1)<br>jp-tok-2 (Tokyo 2)<br>jp-tok-3 (Tokyo 3)|jp-tok-1 (Tokyo 1)<br>jp-tok-2 (Tokyo 2)<br>jp-tok-3 (Tokyo 3)|
-|au-syd-1 (Sydney 1)<br>au-syd-2 (Sydney 2)<br>au-syd-3 (Sydney 3)|Coming Soon|
-{: caption="Table 1. Comparable VPC Gen 2 sites" caption-side="top"}
-
-### How do I determine what needs to be migrated in VPC Gen 1?
+## How do I determine what needs to be migrated in VPC Gen 1?
 {: #migrating-faqs-determine}
 
 You can find your system configuration details by selecting your device from the list in the [Virtual Private Cloud Console](https://cloud.ibm.com/login){: external}. From this location, go to the upper left corner and click **VPC Infrastructure**.  You might have both Gen 1 and Gen 2 resources.  To switch between the two, click the icon next to **Gen 1** or **Gen 2** and Gen 1 from the dialog that appears on your screen.  Click **Continue** to go to Gen 1 resources.
@@ -84,8 +74,6 @@ You can find your system configuration details by selecting your device from the
 Having difficulties?  Reach out to our [Client Success team](https://www.ibm.com/cloud/data-centers/?focusArea=WCP%20-%20Pooled%20CSM&contactmodule){: external}.
 
 ![Migrating-Faqs.](images/vpc-migrate-determine-resources.png){:caption="Figure 1. Determine Gen 1 resources to migrate" caption-side="bottom"}
-
-For more information, contact the [Client Success team](https://www.ibm.com/cloud/data-centers/?focusArea=WCP%20-%20Pooled%20CSM&contactmodule){: external}.
 
 ## How do I determine what is in VPC Gen 1 that needs to be migrated by using an API or CLI?
 {: #migrating-faqs-api-cli}
