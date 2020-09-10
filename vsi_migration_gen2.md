@@ -19,7 +19,7 @@ subcollection: vpc-on-classic
 {:important: .important}
 {:table: .aria-labeledby="caption"}
 
-# Instructions for migrating from VPC (Gen 1) to VPC (Gen 2)
+# Instructions for migrating from Gen 1 to Gen 2
 {: #migrating-vpc}
 
 This topic is a guide for migrating your VPC (Gen 1) infrastructure to VPC (Gen 2). For more information on this migration, refer to [About migrating from VPC (Gen 1) to VPC (Gen 2)](/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs).
