@@ -14,6 +14,7 @@ subcollection: vpc-on-classic
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
+{:deprecated .deprecated}
 {:note: .note}
 {:important: .important}
 {:download: .download}

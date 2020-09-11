@@ -16,6 +16,7 @@ subcollection: vpc-on-classic
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:deprecated .deprecated}
 {:important: .important}
 {:download: .download}
 {:DomainName: data-hd-keyref="DomainName"}
@@ -40,10 +41,10 @@ To get started with {{site.data.keyword.vpc_full}} (Gen 1 compute):
 4. Select the profiles of virtual server instances (VSIs) you'd like to run, and instantiate them.
 5. Reserve a floating IP address, and associate it with a virtual server instance if you want to reach it from the internet.
 5. Deploy your service or applications across the virtual server instances.
- 
+
 Explore our latest generation of compute resources. For more information, see [Getting started with Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started).
 {:important}
- 
+
 ## Before you begin
 {: #prerequisites}
 
