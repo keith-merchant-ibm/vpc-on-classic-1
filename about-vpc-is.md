@@ -14,8 +14,8 @@ subcollection: vpc-on-classic
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
-{:deprecated .deprecated}
 {:note: .note}
+{:deprecated: .deprecated}
 {:important: .important}
 {:download: .download}
 {:table: .aria-labeledby="caption"}
@@ -25,7 +25,7 @@ subcollection: vpc-on-classic
 {: #about}
 
 As IBM continues to invest and innovate on the IBM Cloud Virtual Private Cloud (gen 2 compute) infrastructure, we're focusing on delivering maximum value in a single VPC Infrastructure platform. To support this effort, generation 1 compute infrastructure is being deprecated. The end of service date is 26 February 2021. For more information, see the [Start your migration](https://www.ibm.com/cloud/blog/announcements/start-your-vpc-gen1-to-vpc-gen2-migration){:external} blog.
-{:deprecated}
+{: deprecated} 
 
 {{site.data.keyword.cloud}} Virtual Private Cloud (VPC) allows you to create your own space in the IBM Cloud, to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud.
 
