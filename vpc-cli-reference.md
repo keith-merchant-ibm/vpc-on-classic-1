@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-24"
+lastupdated: "2020-09-15"
 
 keywords:
 
@@ -280,16 +280,18 @@ ibmcloud is image-update IMAGE --name NEW_NAME [--output JSON] [-q, --quiet]
 ### ibmcloud is image-delete
 {: #image-delete}
 
-Delete an image.
+Delete images.
 
 ```
-ibmcloud is image-delete IMAGE [-f, --force] [-q, --quiet]
+ibmcloud is image-delete (IMAGE1 IMAGE2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #image-delete-command-options}
 
-- **IMAGE**: ID of the image.
+- **IMAGE1**: ID of the image.
+- **IMAGE2**: ID of the image.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -393,16 +395,18 @@ ibmcloud is key-update KEY --name NEW_NAME [--output JSON] [-q, --quiet]
 ### ibmcloud is key-delete
 {: #key-delete}
 
-Delete a key.
+Delete keys.
 
 ```
-ibmcloud is key-delete KEY [-f, --force] [-q, --quiet]
+ibmcloud is key-delete (KEY1 KEY2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #key-delete-command-options}
 
-- **KEY**: ID of the key.
+- **KEY1**: ID of the key.
+- **KEY2**: ID of the key.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -492,7 +496,7 @@ Create instance with volume attachment.
 Create instance with existing volume in volume attachment.
 - `ibmcloud is instance-create my-instance-name 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 us-south-1 bc1-4x16 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --image-id 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --key-ids 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8,72b27b5c-f4b0-48bb-b954-5becc7c1dcb3`
 Create instance with multiple SSH keys.
-- `ibmcloud is instance-create my-instance-name 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 us-south-1 bc1-4x16 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --image-id 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --boot-volume '{"name": "boot-vol-name", "volume": {"profile": {"name": "general-purpose"},"encryption_key": {"crn": "crn:v1:staging:public:is:us-south:a/28e4d90bc7504be694471ee66e70e0d5::vpc:r134-6f29b057-4a98-45e7-b386-03cea35d659c"}}}'`
+- `ibmcloud is instance-create my-instance-name 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 us-south-1 bc1-4x16 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --image-id 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --boot-volume '{"name": "boot-vol-name", "volume": {"profile": {"name": "general-purpose"},"encryption_key": {"crn": "crn:v1:bluemix:public:kms:us-south:adffc98a0f1f0f95f6613b3b752286b87:e4a29d1a-2ef0-42a6-8fd2-350deb1c647e:key:5437653b-c4b1-447f-9646-b2a2a4cd6179"}}}'`
 Create instance with encrypted boot volume.
 - `ibmcloud is instance-create my-instance-name 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 us-south-1 bc1-4x16 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --image-id 72b27b5c-f4b0-48bb-b954-5becc7c1dcb8 --network-interface '[{"name": "secondary-nic", "subnet": {"id":"72b27b5c-f4b0-48bb-b954-5becc7c1dcb3"}, "security_groups": [{"id": "72b27b5c-f4b0-48bb-b954-5becc7c1dcb8"}, {"id": "72b27b5c-f4b0-48bb-b954-5becc7c1dcb3"}]}]'`
 Create instance that is attached to secondary network interface.
@@ -533,16 +537,18 @@ ibmcloud is instance-update INSTANCE --name NEW_NAME [--output JSON] [-q, --quie
 ### ibmcloud is instance-delete
 {: #instance-delete}
 
-Delete a virtual server instance.
+Delete virtual server instances.
 
 ```
-ibmcloud is instance-delete INSTANCE [-f, --force] [-q, --quiet]
+ibmcloud is instance-delete (INSTANCE1 INSTANCE2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #instance-delete-command-options}
 
-- **INSTANCE**: ID of the instance.
+- **INSTANCE1**: ID of the instance.
+- **INSTANCE2**: ID of the instance.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -814,17 +820,19 @@ ibmcloud is instance-volume-attachment-add NAME INSTANCE VOLUME [--auto-delete f
 ### ibmcloud is instance-volume-attachment-detach
 {: #instance-volume-attachment-detach}
 
-Delete a volume attachment, detaching a volume from an instance.
+Delete volume attachments, detaching volume from an instance.
 
 ```
-ibmcloud is instance-volume-attachment-detach INSTANCE VOLUME_ATTACHMENT [-f, --force] [-q, --quiet]
+ibmcloud is instance-volume-attachment-detach INSTANCE (VOLUME_ATTACHMENT1 VOLUME_ATTACHMENT2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #instance-volume-attachment-detach-command-options}
 
 - **INSTANCE**: ID of the instance.
-- **VOLUME_ATTACHMENT**: ID of the volume attachment.
+- **VOLUME_ATTACHMENT1**: ID of the volume attachment.
+- **VOLUME_ATTACHMENT2**: ID of the volume attachment.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -949,16 +957,18 @@ ibmcloud is floating-ip-reserve FLOATING_IP_NAME (--zone ZONE_NAME | --nic-id NI
 ### ibmcloud is floating-ip-release
 {: #floating-ip-release}
 
-Release a floating IP.
+Release floating IPs.
 
 ```
-ibmcloud is floating-ip-release FLOATING_IP [-f, --force] [-q, --quiet]
+ibmcloud is floating-ip-release (FLOATING_IP1 FLOATING_IP2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #floating-ip-release-command-options}
 
-- **FLOATING_IP**: ID of the floating IP.
+- **FLOATING_IP1**: ID of the floating IP.
+- **FLOATING_IP2**: ID of the floating IP.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1066,16 +1076,18 @@ ibmcloud is load-balancer-create LOAD_BALANCER_NAME LOAD_BALANCER_TYPE (--subnet
 ### ibmcloud is load-balancer-delete
 {: #load-balancer-delete}
 
-Delete a load balancer.
+Delete load balancers.
 
 ```
-ibmcloud is load-balancer-delete LOAD_BALANCER_ID [-f, --force] [-q, --quiet]
+ibmcloud is load-balancer-delete (LOAD_BALANCER_ID1 LOAD_BALANCER_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #load-balancer-delete-command-options}
 
-- **LOAD_BALANCER_ID**: ID of the load balancer.
+- **LOAD_BALANCER_ID1**: ID of the load balancer.
+- **LOAD_BALANCER_ID2**: ID of the load balancer.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1187,17 +1199,19 @@ Possible values for _condition_ are "contains", "equals", or "matches_regex". Po
 ### ibmcloud is load-balancer-listener-delete
 {: #load-balancer-listener-delete}
 
-Delete a load balancer listener.
+Delete load balancer listeners.
 
 ```
-ibmcloud is load-balancer-listener-delete LOAD_BALANCER_ID LISTENER_ID [-f, --force] [-q, --quiet]
+ibmcloud is load-balancer-listener-delete LOAD_BALANCER_ID (LISTENER_ID1 LISTENER_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #load-balancer-listener-delete-command-options}
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
-- **LISTENER_ID**: ID of the listener.
+- **LISTENER_ID1**: ID of the listener.
+- **LISTENER_ID2**: ID of the listener.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1318,10 +1332,10 @@ Possible values for _condition_ are "contains", "equals", or "matches_regex". Po
 ### ibmcloud is load-balancer-listener-policy-delete
 {: #load-balancer-listener-policy-delete}
 
-Delete a policy from a load balancer listener.
+Delete policies from a load balancer listener.
 
 ```
-ibmcloud is load-balancer-listener-policy-delete LOAD_BALANCER_ID LISTENER_ID POLICY_ID [-f, --force] [-q, --quiet]
+ibmcloud is load-balancer-listener-policy-delete LOAD_BALANCER_ID LISTENER_ID (POLICY_ID1 POLICY_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
@@ -1329,7 +1343,9 @@ ibmcloud is load-balancer-listener-policy-delete LOAD_BALANCER_ID LISTENER_ID PO
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
-- **POLICY_ID**: ID of the policy.
+- **POLICY_ID1**: ID of the policy.
+- **POLICY_ID2**: ID of the policy.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1473,10 +1489,10 @@ ibmcloud is load-balancer-listener-policy-rule-update LOAD_BALANCER_ID LISTENER_
 ### ibmcloud is load-balancer-listener-policy-rule-delete
 {: #load-balancer-listener-policy-rule-delete}
 
-Delete a policy from a load balancer listener.
+Delete policies from a load balancer listener.
 
 ```
-ibmcloud is load-balancer-listener-policy-rule-delete LOAD_BALANCER_ID LISTENER_ID POLICY_ID RULE_ID [-f, --force] [-q, --quiet]
+ibmcloud is load-balancer-listener-policy-rule-delete LOAD_BALANCER_ID LISTENER_ID POLICY_ID (RULE_ID1 RULE_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
@@ -1485,7 +1501,9 @@ ibmcloud is load-balancer-listener-policy-rule-delete LOAD_BALANCER_ID LISTENER_
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID**: ID of the policy.
-- **RULE_ID**: ID of the rule.
+- **RULE_ID1**: ID of the rule.
+- **RULE_ID2**: ID of the rule.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1566,17 +1584,19 @@ ibmcloud is load-balancer-pool-create POOL_NAME LOAD_BALANCER_ID ALGORITHM PROTO
 ### ibmcloud is load-balancer-pool-delete
 {: #load-balancer-pool-delete}
 
-Delete a pool from a load balancer.
+Delete pools from a load balancer.
 
 ```
-ibmcloud is load-balancer-pool-delete LOAD_BALANCER_ID POOL_ID [-f, --force] [-q, --quiet]
+ibmcloud is load-balancer-pool-delete LOAD_BALANCER_ID (POOL_ID1 POOL_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #load-balancer-pool-delete-command-options}
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
-- **POOL_ID**: ID of the pool.
+- **POOL_ID1**: ID of the pool.
+- **POOL_ID2**: ID of the pool.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1720,10 +1740,10 @@ ibmcloud is load-balancer-pool-member-update LOAD_BALANCER_ID POOL_ID MEMBER_ID 
 ### ibmcloud is load-balancer-pool-member-delete
 {: #load-balancer-pool-member-delete}
 
-Delete a member from a load balancer pool.
+Delete members from a load balancer pool.
 
 ```
-ibmcloud is load-balancer-pool-member-delete LOAD_BALANCER_ID POOL_ID MEMBER_ID [-f, --force] [-q, --quiet]
+ibmcloud is load-balancer-pool-member-delete LOAD_BALANCER_ID POOL_ID (MEMBER_ID1 MEMBER_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
@@ -1731,7 +1751,9 @@ ibmcloud is load-balancer-pool-member-delete LOAD_BALANCER_ID POOL_ID MEMBER_ID 
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **POOL_ID**: ID of the pool.
-- **MEMBER_ID**: ID of the member.
+- **MEMBER_ID1**: ID of the member.
+- **MEMBER_ID2**: ID of the member.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1851,16 +1873,18 @@ ibmcloud is public-gateway-update GATEWAY --name NEW_NAME [--output JSON] [-q, -
 ### ibmcloud is public-gateway-delete
 {: #public-gateway-delete}
 
-Delete a public gateway.
+Delete public gateways.
 
 ```
-ibmcloud is public-gateway-delete GATEWAY [-f, --force] [-q, --quiet]
+ibmcloud is public-gateway-delete (GATEWAY1 GATEWAY2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #public-gateway-delete-command-options}
 
-- **GATEWAY**: ID of the public gateway.
+- **GATEWAY1**: ID of the public gateway.
+- **GATEWAY2**: ID of the public gateway.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1965,16 +1989,18 @@ ibmcloud is network-acl-update ACL --name NEW_NAME [--output JSON] [-q, --quiet]
 ### ibmcloud is network-acl-delete
 {: #network-acl-delete}
 
-Delete a network ACL.
+Delete network ACLs.
 
 ```
-ibmcloud is network-acl-delete ACL [-f, --force] [-q, --quiet]
+ibmcloud is network-acl-delete (ACL1 ACL2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #network-acl-delete-command-options}
 
-- **ACL**: ID of the network ACL.
+- **ACL1**: ID of the network ACL.
+- **ACL2**: ID of the network ACL.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2103,17 +2129,19 @@ ibmcloud is network-acl-rule-update ACL RULE [--name NEW_NAME] [--direction inbo
 ### ibmcloud is network-acl-rule-delete
 {: #network-acl-rule-delete}
 
-Delete a rule from a network ACL.
+Delete rules from a network ACL.
 
 ```
-ibmcloud is network-acl-rule-delete ACL RULE [-f, --force] [-q, --quiet]
+ibmcloud is network-acl-rule-delete ACL (RULE1 RULE2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #network-acl-rule-delete-command-options}
 
 - **ACL**: ID of the network ACL.
-- **RULE**: ID of the rule.
+- **RULE1**: ID of the rule.
+- **RULE2**: ID of the rule.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2224,16 +2252,18 @@ ibmcloud is subnet-update SUBNET [--name NEW_NAME] [--network-acl-id NETWORK_ACL
 ### ibmcloud is subnet-delete
 {: #subnet-delete}
 
-Delete a subnet.
+Delete subnets.
 
 ```
-ibmcloud is subnet-delete SUBNET [-f, --force] [-q, --quiet]
+ibmcloud is subnet-delete (SUBNET1 SUBNET2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #subnet-delete-command-options}
 
-- **SUBNET**: ID of the subnet.
+- **SUBNET1**: ID of the subnet.
+- **SUBNET2**: ID of the subnet.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2372,16 +2402,18 @@ ibmcloud is security-group-update GROUP [--name NEW_NAME] [--output JSON] [-q, -
 ### ibmcloud is security-group-delete
 {: #security-group-delete}
 
-Delete a security group.
+Delete security groups.
 
 ```
-ibmcloud is security-group-delete GROUP [-f, --force] [-q, --quiet]
+ibmcloud is security-group-delete (GROUP1 GROUP2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #security-group-delete-command-options}
 
-- **GROUP**: ID of the security group.
+- **GROUP1**: ID of the security group.
+- **GROUP2**: ID of the security group.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2451,17 +2483,19 @@ ibmcloud is security-group-network-interface-add GROUP NIC [--output JSON] [-q, 
 ### ibmcloud is security-group-network-interface-remove
 {: #security-group-network-interface-remove}
 
-Remove a network interface from a security group.
+Remove network interfaces from a security group.
 
 ```
-ibmcloud is security-group-network-interface-remove GROUP NIC [-f, --force] [-q, --quiet]
+ibmcloud is security-group-network-interface-remove GROUP (NIC1 NIC2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #security-group-network-interface-remove-command-options}
 
 - **GROUP**: ID of the security group.
-- **NIC**: ID of the network interface.
+- **NIC1**: ID of the network interface.
+- **NIC2**: ID of the network interface.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2574,17 +2608,19 @@ ibmcloud is security-group-rule-update GROUP RULE_ID [--direction inbound | outb
 ### ibmcloud is security-group-rule-delete
 {: #security-group-rule-delete}
 
-Delete a rule from a security group.
+Delete rules from a security group.
 
 ```
-ibmcloud is security-group-rule-delete GROUP RULE_ID [-f, --force] [-q, --quiet]
+ibmcloud is security-group-rule-delete GROUP (RULE_ID1 RULE_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #security-group-rule-delete-command-options}
 
 - **GROUP**: ID of the security group.
-- **RULE_ID**: ID of the security group rule.
+- **RULE_ID1**: ID of the security group rule.
+- **RULE_ID2**: ID of the security group rule.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2691,16 +2727,18 @@ ibmcloud is vpc-update VPC --name NEW_NAME [--output JSON] [-q, --quiet]
 ### ibmcloud is vpc-delete
 {: #vpc-delete}
 
-Delete a VPC.
+Delete VPCs.
 
 ```
-ibmcloud is vpc-delete VPC [-f, --force] [-q, --quiet]
+ibmcloud is vpc-delete (VPC1 VPC2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #vpc-delete-command-options}
 
-- **VPC**: ID of the VPC.
+- **VPC1**: ID of the VPC.
+- **VPC2**: ID of the VPC.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2773,17 +2811,19 @@ ibmcloud is vpc-address-prefix-create PREFIX_NAME VPC ZONE_NAME CIDR [--default 
 ### ibmcloud is vpc-address-prefix-delete
 {: #vpc-address-prefix-delete}
 
-Delete an address prefix.
+Delete address prefixes.
 
 ```
-ibmcloud is vpc-address-prefix-delete VPC PREFIX [-f, --force] [-q, --quiet]
+ibmcloud is vpc-address-prefix-delete VPC (PREFIX1 PREFIX2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #vpc-address-prefix-delete-command-options}
 
 - **VPC**: ID of the VPC.
-- **PREFIX**: ID of the VPC address prefix.
+- **PREFIX1**: ID of the VPC address prefix.
+- **PREFIX2**: ID of the VPC address prefix.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2925,17 +2965,19 @@ ibmcloud is vpc-route-update VPC ROUTE --name NEW_NAME [--output JSON] [-q, --qu
 ### ibmcloud is vpc-route-delete
 {: #vpc-route-delete}
 
-Delete a route.
+Delete routes.
 
 ```
-ibmcloud is vpc-route-delete VPC ROUTE [-f, --force] [-q, --quiet]
+ibmcloud is vpc-route-delete VPC (ROUTE1 ROUTE2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #vpc-route-delete-command-options}
 
 - **VPC**: ID of the VPC.
-- **ROUTE**: ID of the VPC route.
+- **ROUTE1**: ID of the VPC route.
+- **ROUTE2**: ID of the VPC route.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3105,16 +3147,18 @@ ibmcloud is ike-policy-create IKE_POLICY_NAME AUTHENTICATION_ALGORITHM DH_GROUP 
 ### ibmcloud is ike-policy-delete
 {: #ike-policy-delete}
 
-Delete an IKE policy.
+Delete IKE policies.
 
 ```
-ibmcloud is ike-policy-delete IKE_POLICY_ID [-f, --force] [-q, --quiet]
+ibmcloud is ike-policy-delete (IKE_POLICY_ID1 IKE_POLICY_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #ike-policy-delete-command-options}
 
-- **IKE_POLICY_ID**: ID of the IKE policy.
+- **IKE_POLICY_ID1**: ID of the IKE policy.
+- **IKE_POLICY_ID2**: ID of the IKE policy.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3249,16 +3293,18 @@ ibmcloud is ipsec-policy-create IPSEC_POLICY_NAME AUTHENTICATION_ALGORITHM ENCRY
 ### ibmcloud is ipsec-policy-delete
 {: #ipsec-policy-delete}
 
-Delete an IPsec policy.
+Delete an IPsec policies.
 
 ```
-ibmcloud is ipsec-policy-delete IPSEC_POLICY_ID [-f, --force] [-q, --quiet]
+ibmcloud is ipsec-policy-delete (IPSEC_POLICY_ID1 IPSEC_POLICY_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #ipsec-policy-delete-command-options}
 
-- **IPSEC_POLICY_ID**: ID of the IPsec policy.
+- **IPSEC_POLICY_ID1**: ID of the IPsec policy.
+- **IPSEC_POLICY_ID2**: ID of the IPsec policy.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3387,16 +3433,18 @@ ibmcloud is vpn-gateway-create VPN_GATEWAY_NAME SUBNET [--resource-group-id RESO
 ### ibmcloud is vpn-gateway-delete
 {: #vpn-gateway-delete}
 
-Delete a VPN gateway.
+Delete VPN gateways.
 
 ```
-ibmcloud is vpn-gateway-delete VPN_GATEWAY_ID [-f, --force] [-q, --quiet]
+ibmcloud is vpn-gateway-delete (VPN_GATEWAY_ID1 VPN_GATEWAY_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #vpn-gateway-delete-command-options}
 
-- **VPN_GATEWAY_ID**: ID of the VPN gateway.
+- **VPN_GATEWAY_ID1**: ID of the VPN gateway.
+- **VPN_GATEWAY_ID2**: ID of the VPN gateway.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3489,14 +3537,15 @@ ibmcloud is vpn-gateway-connection-create CONNECTION_NAME VPN_GATEWAY_ID PEER_AD
 View details of a VPN gateway connection.
 
 ```
-ibmcloud is vpn-gateway-connection VPN_GATEWAY_ID CONNECTION_ID [--output JSON] [-q, --quiet]
+ibmcloud is vpn-gateway-connection VPN_GATEWAY_ID (CONNECTION_ID1 CONNECTION_ID2 ...) [--output JSON] [-q, --quiet]
 ```
 
 #### Command options
 {: #vpn-gateway-connection-command-options}
 
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
-- **CONNECTION_ID**: ID of the VPN connection.
+- **CONNECTION_ID1**: ID of the VPN connection.
+- **CONNECTION_ID2**: ID of the VPN connection.
 - **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3505,17 +3554,19 @@ ibmcloud is vpn-gateway-connection VPN_GATEWAY_ID CONNECTION_ID [--output JSON] 
 ### ibmcloud is vpn-gateway-connection-delete
 {: #vpn-gateway-connection-delete}
 
-Delete a VPN gateway connection.
+Delete VPN gateway connections.
 
 ```
-ibmcloud is vpn-gateway-connection-delete VPN_GATEWAY_ID CONNECTION_ID [-f, --force] [-q, --quiet]
+ibmcloud is vpn-gateway-connection-delete VPN_GATEWAY_ID (CONNECTION_ID1 CONNECTION_ID2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #vpn-gateway-connection-delete-command-options}
 
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
-- **CONNECTION_ID**: ID of the VPN connection.
+- **CONNECTION_ID1**: ID of the VPN connection.
+- **CONNECTION_ID2**: ID of the VPN connection.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3700,7 +3751,7 @@ ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACIT
 - **PROFILE_NAME**: Name of the profile.
 - **ZONE_NAME**: Name of the zone.
 - **--capacity**: The capacity of the volume in gigabytes. Range 10-2000. (default: **100**).
-- **--iops**: Input/Output Operations Per Second for the volume, it is only applicable for custom profile volumes. For the IOPS range, refer to: https://cloud.ibm.com/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#custom-gen1.
+- **--iops**: Input/Output Operations Per Second for the volume, it is only applicable for custom profile volumes. For the IOPS range, refer to https://cloud.ibm.com/docs/vpc-on-classic-block-storage?topic=vpc-on-classic-block-storage-block-storage-profiles-gen1#custom-gen1.
 - **--encryption-key**: The CRN of the Key Management Service root key.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
@@ -3713,7 +3764,7 @@ ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACIT
 - `ibmcloud is volume-create my-volume general-purpose us-south-1`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --capacity 500`
 - `ibmcloud is volume-create my-volume custom us-south-1 --iops 10000 --capacity 1000`
-- `ibmcloud is volume-create my-volume general-purpose us-south-1 --encryption-key crn:v1:staging:public:is:us-south:a/28e4d90ac7504be694471ea66e70d0d5::vpc:r134-6f29b057-4a98-45e7-b386-03cea35a659c`
+- `ibmcloud is volume-create my-volume general-purpose us-south-1 --encryption-key crn:v1:bluemix:public:kms:us-south:adffc98a0f1f0f95f6613b3b752286b87:e4a29d1a-2ef0-42a6-8fd2-350deb1c647e:key:5437653b-c4b1-447f-9646-b2a2a4cd6179`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --resource-group-id 72b27b5c-f4b0-48bb-b954-5becc7c1dcb3`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --resource-group-name Default`
 - `ibmcloud is volume-create my-volume general-purpose us-south-1 --output JSON`
@@ -3723,16 +3774,18 @@ ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACIT
 ### ibmcloud is volume-delete
 {: #volume-delete}
 
-Delete a volume.
+Delete volumes.
 
 ```
-ibmcloud is volume-delete VOLUME [-f, --force] [-q, --quiet]
+ibmcloud is volume-delete (VOLUME1 VOLUME2 ...) [--output JSON] [-f, --force] [-q, --quiet]
 ```
 
 #### Command options
 {: #volume-delete-command-options}
 
-- **VOLUME**: ID of the volume.
+- **VOLUME1**: ID of the volume.
+- **VOLUME2**: ID of the volume.
+- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
