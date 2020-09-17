@@ -705,7 +705,7 @@ Member port is a required field. Provide a value for member port.
 ## member_not_found
 **Message**:  Member with ID <member_id> cannot be found.
 
-Provide an existing member ID.
+Provide a member ID where the user has read access and read access to the subnet where the member resides.
 
 ## member_over_quota
 **Message**: Member cannot be created. Quota of member instances under the pool has reached maximum limit.
