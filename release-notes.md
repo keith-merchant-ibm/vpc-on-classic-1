@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-01"
+lastupdated: "2020-09-18"
 
 keywords:
 
@@ -25,6 +25,16 @@ subcollection: vpc-on-classic
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
+
+## 18 September 2020
+{: #sept-18-2020}
+
+**New version `0.6.4` of the CLI plug-in `vpc-infrastructure` has been released**. 
+
+   - Deletion commands now support batch deletion.
+   - The ability to delete multiple resources at a time has been added to various commands.
+   
+   To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites). 
 
 ## 01 September 2020
 {: #sept-01-2020}
