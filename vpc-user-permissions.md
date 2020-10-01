@@ -53,7 +53,7 @@ Invite an IBM Cloud user to your account so that they can view, create, and upda
 1. Go to the [IAM Users](https://cloud.ibm.com/iam/users){: external} page in the IBM Cloud console and click **Invite users**.
 1. In the **Enter Email addresses** field, enter the email addresses of the users that you want to invite.
 1. In the **Assign users additional access** section, select **IAM services** and complete the following information:
-   * From the **What type of access do you want to assign?** list, select **Infrastructure Service**.
+   * From the **What type of access do you want to assign?** list, select **VPC Infrastructure Services**.
    * In the adjacent **in** field, select where you want this access granted. For example, select **All resource groups**.
    * From the **Resource type** list, select **All resource types**.
    * In the **Platform access** section, select **Editor**.
@@ -72,7 +72,7 @@ This scenario covers the basic steps needed to give an existing user in your acc
 1. Select the user whose authorization you're enabling.
 1. Under the **Access policies** tab, select **Assign access**.
 1. In the **Assign users additional access** section, select **IAM services** and complete the following information:
-   * From the **What type of access do you want to assign?** list, select **Infrastructure Service**.
+   * From the **What type of access do you want to assign?** list, select **VPC Infrastructure Services**.
    * In the adjacent **in** field, select **All resource groups**.
    * From the **Resource type** list, select **All resource types**.
    * In the **Platform access** section, select **Editor**.
@@ -130,7 +130,7 @@ Add the necessary VPC access policies for each access group. For example, add a 
 1. Select an access group. Let's start with the `test_team_manage_vpcs` access group.
 1. On the **Access policies** tab, click **Assign access**.
 1. In the **Assign access group additional access** section, select **IAM services**
-1. From the **What type of access do you want to assign?** list, select **Infrastructure Service**.
+1. From the **What type of access do you want to assign?** list, select **VPC Infrastructure Services**.
 1. From the **in** list, select **Resource group: test_team**.
 1. From the **Resource type** list, select **All resource types**.
 1. In the **Platform access** area, select **Editor**.
@@ -138,8 +138,7 @@ Add the necessary VPC access policies for each access group. For example, add a 
 1. Scroll to the end of the page and click **Add**.
 1. In the **Access summary** side panel, review the details and click **Assign**.
 
-Since some Infrastructure Service resources are created
-in the Default resource group, the access group must also have **Viewer** access in the Default resource group.
+Since some VPC Infrastructure Service resources are created in the Default resource group, the access group must also have **Viewer** access in the Default resource group.
 {: important}
 
 Repeat the previous steps to add access policies for the remaining three access groups.
