@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-09-18"
+lastupdated: "2020-10-08"
 
 keywords:
 
@@ -118,6 +118,8 @@ To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on
 - Command output includes Cloud Resource Name (CRN) fields now.
 
 To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites).
+
+{{site.data.keyword.cloud_notm}} interprets volume capacity units in gibibytes, but the API documentation used gigabytes. This issue has been resolved in the documentation.
 
 ## 3 April 2020
 {: #april-3-2020}
