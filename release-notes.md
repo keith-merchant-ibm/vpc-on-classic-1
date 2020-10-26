@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-08"
+lastupdated: "2020-10-23"
 
 keywords:
 
@@ -26,15 +26,25 @@ subcollection: vpc-on-classic
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
 
+## 23 October 2020
+{: #oct-23-2020}
+
+**New version `0.6.6` of the CLI plug-in `vpc-infrastructure` has been released**.
+
+   - Added `load-balancer-pool-members-update` command to replace the entire pool members.
+   - Added `--members flag to load-balancer-pool-create` command to support creating a pool with members.
+
+   To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites).
+
 ## 18 September 2020
 {: #sept-18-2020}
 
-**New version `0.6.4` of the CLI plug-in `vpc-infrastructure` has been released**. 
+**New version `0.6.4` of the CLI plug-in `vpc-infrastructure` has been released**.
 
    - Deletion commands now support batch deletion.
    - The ability to delete multiple resources at a time has been added to various commands.
-   
-   To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites). 
+
+   To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites).
 
 ## 01 September 2020
 {: #sept-01-2020}
@@ -43,11 +53,11 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
    - Implemented access changes to the [VPC Overview page](https://cloud.ibm.com/vpc-ext/overview) and generation switcher.
    - Migration documentation: [About Migrating from VPC (Gen 1) to VPC (Gen2)](https://cloud.ibm.com/docs/vpc-on-classic?topic=vpc-on-classic-migrating-faqs)
-   
-**New version `0.6.3` of the CLI plug-in `vpc-infrastructure` has been released**. 
 
-   - You no longer have to set the target generation to use CLI commands (for example, `ibmcloud is target --gen 1` or `ibmcloud is target --gen 2`). The CLI now defaults to `gen2`. 
-   - To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites). 
+**New version `0.6.3` of the CLI plug-in `vpc-infrastructure` has been released**.
+
+   - You no longer have to set the target generation to use CLI commands (for example, `ibmcloud is target --gen 1` or `ibmcloud is target --gen 2`). The CLI now defaults to `gen2`.
+   - To update the `vpc-infrastructure` plug-in, see the [CLI reference](/docs/vpc-on-classic?topic=vpc-on-classic-vpc-reference#cli-prerequisites).
 
 ## 17 July 2020
 {: #july-17-2020}
