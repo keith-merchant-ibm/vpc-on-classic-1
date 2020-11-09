@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-23"
+lastupdated: "2020-11-06"
 
 keywords:
 
@@ -25,6 +25,13 @@ subcollection: vpc-on-classic
 
 Use these release notes to learn about the latest changes to {{site.data.keyword.vpc_full}}.
 {:shortdesc}
+
+## 6 November 2020
+{: #nov-6-2020}
+
+**New version `0.7.1` of the CLI plug-in `vpc-infrastructure` has been released**.
+
+   Added proxy protocol support for {{site.data.keyword.cloud}} Application Load Balancer for VPC. Proxy protocol provides a way to carry client information across proxies by appending it to the traffic your load balancer sends to the back-end servers. It also allows you to use listeners if incoming traffic contains proxy protocol information set by an intermediate proxy in between the client and your load balancer. See [Enabling proxy protocol](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-advanced-traffic-management#proxy-protocol-enablement) for details.
 
 ## 23 October 2020
 {: #oct-23-2020}
