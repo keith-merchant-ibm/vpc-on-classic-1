@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-02"
+  years: 2017, 2021
+lastupdated: "2021-02-05"
 
 keywords:
 
@@ -91,7 +91,7 @@ ibmcloud is target [--gen 2 | 1] [--output JSON] [-q, --quiet]
 {: #ibmcloud-is-target-command-options}
 
 - **--gen**: Generation of compute resources. Default is **2**. You must set the value to **1** to access generation 1 resources. One of: **2**, **1**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -122,7 +122,7 @@ ibmcloud is instance-profiles [--output JSON] [-q, --quiet]
 #### Command options
 {: #instance-profiles-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -140,7 +140,7 @@ ibmcloud is instance-profile PROFILE_NAME [--output JSON] [-q, --quiet]
 {: #instance-profile-command-options}
 
 - **PROFILE_NAME**: Name of the profile.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -161,7 +161,7 @@ ibmcloud is operating-systems [--output JSON] [-q, --quiet]
 #### Command options
 {: #operating-systems-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -179,7 +179,7 @@ ibmcloud is operating-system OPERATING_SYSTEM_NAME [--output JSON] [-q, --quiet]
 {: #operating-system-command-options}
 
 - **OPERATING_SYSTEM_NAME**: Name of the operating system.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -200,7 +200,7 @@ ibmcloud is images [--visibility all | public | private] [--resource-group-id RE
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -218,7 +218,7 @@ ibmcloud is image IMAGE [--output JSON] [-q, --quiet]
 {: #image-command-options}
 
 - **IMAGE**: ID of the image.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -237,10 +237,10 @@ ibmcloud is image-create IMAGE_NAME --file IMAGE_FILE_LOCATION --os-name OPERATI
 
 - **IMAGE_NAME**: Name of the image.
 - **--file**: The Cloud Object Store (COS) location of the image file, for example: **cos://us-south/custom-image-vpc-bucket/customImage-0.vhd**.
-- **--os-name**: The name of the operating system for this image.
+- **--os-name**: Name of the operating system for this image.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -267,7 +267,7 @@ ibmcloud is image-update IMAGE --name NEW_NAME [--output JSON] [-q, --quiet]
 
 - **IMAGE**: ID of the image.
 - **--name**: New name of the image.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -291,7 +291,7 @@ ibmcloud is image-delete (IMAGE1 IMAGE2 ...) [--output JSON] [-f, --force] [-q, 
 
 - **IMAGE1**: ID of the image.
 - **IMAGE2**: ID of the image.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -316,7 +316,7 @@ ibmcloud is keys [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name 
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -334,7 +334,7 @@ ibmcloud is key KEY [--output JSON] [-q, --quiet]
 {: #key-command-options}
 
 - **KEY**: ID of the key.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -355,7 +355,7 @@ ibmcloud is key-create KEY_NAME (KEY | @KEY_FILE) [--resource-group-id RESOURCE_
 - **KEY**: **key**|**@key-file**. The public SSH key to import into the system.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -381,7 +381,7 @@ ibmcloud is key-update KEY --name NEW_NAME [--output JSON] [-q, --quiet]
 
 - **KEY**: ID of the key.
 - **--name**: New name for the key.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -406,7 +406,7 @@ ibmcloud is key-delete (KEY1 KEY2 ...) [--output JSON] [-f, --force] [-q, --quie
 
 - **KEY1**: ID of the key.
 - **KEY2**: ID of the key.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -431,7 +431,7 @@ ibmcloud is instances [--resource-group-id RESOURCE_GROUP_ID | --resource-group-
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -449,7 +449,7 @@ ibmcloud is instance INSTANCE [--output JSON] [-q, --quiet]
 {: #instance-command-options}
 
 - **INSTANCE**: ID of the instance.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -482,7 +482,7 @@ ibmcloud is instance-create INSTANCE_NAME VPC ZONE_NAME PROFILE_NAME SUBNET --im
 - **--network-interface**: NETWORK_INTERFACE_JSON|@NETWORK_INTERFACE_JSON_FILE, network interface attachment in JSON or JSON file.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--interactive, -i**: Supply the parameters under interactive mode. This option is mutually exclusive with all other arguments and options.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -523,7 +523,7 @@ ibmcloud is instance-update INSTANCE --name NEW_NAME [--output JSON] [-q, --quie
 
 - **INSTANCE**: ID of the instance.
 - **--name**: New name of the virtual server instance.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -548,7 +548,7 @@ ibmcloud is instance-delete (INSTANCE1 INSTANCE2 ...) [--output JSON] [-f, --for
 
 - **INSTANCE1**: ID of the instance.
 - **INSTANCE2**: ID of the instance.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -568,7 +568,7 @@ ibmcloud is instance-initialization-values INSTANCE [--private-key (KEY | @KEY_F
 
 - **INSTANCE**: ID of the instance.
 - **--private-key**: **key**|**@key-file**. The private key in PEM format to decrypt Windows administrator default password.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -586,7 +586,7 @@ ibmcloud is instance-start INSTANCE [--output JSON] [-q, --quiet]
 {: #instance-start-command-options}
 
 - **INSTANCE**: ID of the instance.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -605,7 +605,7 @@ ibmcloud is instance-stop INSTANCE [-f, --force] [--output JSON] [-q, --quiet]
 
 - **INSTANCE**: ID of the instance.
 - **--force, -f**: Force the operation without confirmation.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -624,7 +624,7 @@ ibmcloud is instance-reboot INSTANCE [-f, --force] [--output JSON] [-q, --quiet]
 
 - **INSTANCE**: ID of the instance.
 - **--force, -f**: Force the operation without confirmation.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -643,7 +643,7 @@ ibmcloud is instance-reset INSTANCE [-f, --force] [--output JSON] [-q, --quiet]
 
 - **INSTANCE**: ID of the instance.
 - **--force, -f**: Force the operation without confirmation.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -661,7 +661,7 @@ ibmcloud is instance-network-interfaces INSTANCE [--output JSON] [-q, --quiet]
 {: #instance-network-interfaces-command-options}
 
 - **INSTANCE**: ID of the instance.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -680,7 +680,7 @@ ibmcloud is instance-network-interface INSTANCE NIC [--output JSON] [-q, --quiet
 
 - **INSTANCE**: ID of the instance.
 - **NIC**: ID of the network interface.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -699,7 +699,7 @@ ibmcloud is instance-network-interface-floating-ips INSTANCE NIC [--output JSON]
 
 - **INSTANCE**: ID of the instance.
 - **NIC**: ID of the network interface.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -719,7 +719,7 @@ ibmcloud is instance-network-interface-floating-ip INSTANCE NIC FLOATING_IP [--o
 - **INSTANCE**: ID of the instance.
 - **NIC**: ID of the network interface.
 - **FLOATING_IP**: ID of the floating IP.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -739,7 +739,7 @@ ibmcloud is instance-network-interface-floating-ip-add INSTANCE NIC FLOATING_IP 
 - **INSTANCE**: ID of the instance.
 - **NIC**: ID of the network interface.
 - **FLOATING_IP**: ID of the floating IP.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -784,7 +784,7 @@ ibmcloud is instance-volume-attachment INSTANCE VOLUME_ATTACHMENT [--output JSON
 
 - **INSTANCE**: ID of the instance.
 - **VOLUME_ATTACHMENT**: ID of the volume attachment.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -805,7 +805,7 @@ ibmcloud is instance-volume-attachment-add NAME INSTANCE VOLUME [--auto-delete f
 - **INSTANCE**: ID of the instance.
 - **VOLUME**: ID of the volume.
 - **--auto-delete**: The attached volume is deleted when the instance is deleted. One of: **false**, **true**. (default: **false**).
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -832,7 +832,7 @@ ibmcloud is instance-volume-attachment-detach INSTANCE (VOLUME_ATTACHMENT1 VOLUM
 - **INSTANCE**: ID of the instance.
 - **VOLUME_ATTACHMENT1**: ID of the volume attachment.
 - **VOLUME_ATTACHMENT2**: ID of the volume attachment.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -854,7 +854,7 @@ ibmcloud is instance-volume-attachment-update INSTANCE VOLUME_ATTACHMENT [--name
 - **VOLUME_ATTACHMENT**: ID of the volume attachment.
 - **--name**: New name of the volume.
 - **--auto-delete**: The attached volume is deleted when the instance is deleted. One of: **true**, **false**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -879,7 +879,7 @@ ibmcloud is instance-volume-attachments INSTANCE [--output JSON] [-q, --quiet]
 {: #instance-volume-attachments-command-options}
 
 - **INSTANCE**: ID of the instance.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -904,7 +904,7 @@ ibmcloud is floating-ips [--output JSON] [-q, --quiet]
 #### Command options
 {: #floating-ips-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -922,7 +922,7 @@ ibmcloud is floating-ip FLOATING_IP [--output JSON] [-q, --quiet]
 {: #floating-ip-command-options}
 
 - **FLOATING_IP**: ID of the floating IP.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -942,7 +942,7 @@ ibmcloud is floating-ip-reserve FLOATING_IP_NAME (--zone ZONE_NAME | --nic-id NI
 - **FLOATING_IP_NAME**: Name of the floating IP.
 - **--zone**: Name of the target zone. This option is mutually exclusive with **--nic-id**.
 - **--nic-id**: ID of the target network interface. This option is mutually exclusive with **--zone**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -968,7 +968,7 @@ ibmcloud is floating-ip-release (FLOATING_IP1 FLOATING_IP2 ...) [--output JSON] 
 
 - **FLOATING_IP1**: ID of the floating IP.
 - **FLOATING_IP2**: ID of the floating IP.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -989,7 +989,7 @@ ibmcloud is floating-ip-update FLOATING_IP [--name NEW_NAME] [--nic-id NIC_ID] [
 - **FLOATING_IP**: ID of the floating IP.
 - **--name**: New name of the floating IP.
 - **--nic-id**: ID of the network interface to bind.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1020,7 +1020,7 @@ ibmcloud is load-balancers [--resource-group-id RESOURCE_GROUP_ID | --resource-g
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1038,7 +1038,7 @@ ibmcloud is load-balancer LOAD_BALANCER_ID [--output JSON] [-q, --quiet]
 {: #load-balancer-command-options}
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1049,7 +1049,7 @@ ibmcloud is load-balancer LOAD_BALANCER_ID [--output JSON] [-q, --quiet]
 Create a load balancer.
 
 ```
-ibmcloud is load-balancer-create LOAD_BALANCER_NAME LOAD_BALANCER_TYPE (--subnet SUBNET_ID1 --subnet SUBNET_ID2 ...) [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name RESOURCE_GROUP_NAME] [--output JSON] [-q, --quiet]
+ibmcloud is load-balancer-create LOAD_BALANCER_NAME LOAD_BALANCER_TYPE (--subnet SUBNET_ID1 --subnet SUBNET_ID2 ...) [--logging-datapath-active false | true] [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name RESOURCE_GROUP_NAME] [--output JSON] [-q, --quiet]
 ```
 
 #### Command options
@@ -1058,9 +1058,10 @@ ibmcloud is load-balancer-create LOAD_BALANCER_NAME LOAD_BALANCER_TYPE (--subnet
 - **LOAD_BALANCER_NAME**: Name of the load balancer.
 - **LOAD_BALANCER_TYPE**: Type of the load balancer, **public** or **private**.
 - **--subnet**: ID of the subnets to provision this load balancer. This option can be specified multiple times to provision load balancer in multiple subnets.
+- **--logging-datapath-active**: Enable or disable datapath logging for this load balancer. If unspecified, datapath logging is disabled. This is applicable only for application load balancer. One of: **false**, **true**.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1070,6 +1071,7 @@ ibmcloud is load-balancer-create LOAD_BALANCER_NAME LOAD_BALANCER_TYPE (--subnet
 - `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --resource-group-id fee82deba12e4c0fb69c3b09d1f12345`
 - `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --resource-group-name Default`
 - `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --output JSON`
+- `ibmcloud is load-balancer-create lb-name public --subnet 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --subnet 7ec86020-1c6e-4889-b3f0-a15f2e50f87e --logging-datapath-active true`
 
 ---
 
@@ -1087,7 +1089,7 @@ ibmcloud is load-balancer-delete (LOAD_BALANCER_ID1 LOAD_BALANCER_ID2 ...) [--ou
 
 - **LOAD_BALANCER_ID1**: ID of the load balancer.
 - **LOAD_BALANCER_ID2**: ID of the load balancer.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1099,7 +1101,7 @@ ibmcloud is load-balancer-delete (LOAD_BALANCER_ID1 LOAD_BALANCER_ID2 ...) [--ou
 Update a load balancer.
 
 ```
-ibmcloud is load-balancer-update LOAD_BALANCER_ID --name NEW_NAME [--output JSON] [-q, --quiet]
+ibmcloud is load-balancer-update LOAD_BALANCER_ID [--name NEW_NAME] [--logging-datapath-active false | true] [--output JSON] [-q, --quiet]
 ```
 
 #### Command options
@@ -1107,7 +1109,8 @@ ibmcloud is load-balancer-update LOAD_BALANCER_ID --name NEW_NAME [--output JSON
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **--name**: New name of the Load balancer.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--logging-datapath-active**: Enable or disable datapath logging for this load balancer. This is applicable only for application load balancer. One of: **false**, **true**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1115,6 +1118,7 @@ ibmcloud is load-balancer-update LOAD_BALANCER_ID --name NEW_NAME [--output JSON
 
 - `ibmcloud is load-balancer-update 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --name my-loadBalancer`
 - `ibmcloud is load-balancer-update 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --name my-loadBalancer --output JSON`
+- `ibmcloud is load-balancer-update 72251a2e-d6c5-42b4-97b0-b5f8e8d1f479 --logging-datapath-active false`
 
 ---
 
@@ -1131,7 +1135,7 @@ ibmcloud is load-balancer-listeners LOAD_BALANCER_ID [--output JSON] [-q, --quie
 {: #load-balancer-listeners-command-options}
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1150,7 +1154,7 @@ ibmcloud is load-balancer-listener LOAD_BALANCER_ID LISTENER_ID [--output JSON] 
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1174,8 +1178,8 @@ ibmcloud is load-balancer-listener-create LOAD_BALANCER_ID PORT PROTOCOL [--defa
 - **--connection-limit**: The maximum number of connections of the listener.
 - **--certificate-instance-crn**: CRN of the certificate instance. Required when protocol is **https**.
 - **--policies**: **LISTENER_POLICIES_JSON** | **@LISTENER_POLICIES_JSON_FILE**, listener policies in JSON or JSON file.
-- **--accept-proxy-protocol**: If set to true, proxy protocol will be enabled for this listener. Only supported for application load balancers. One of: **false**, **true**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--accept-proxy-protocol**: If set to true, proxy protocol is enabled for this listener. Only supported for application load balancers. One of: **false**, **true**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1213,7 +1217,7 @@ ibmcloud is load-balancer-listener-delete LOAD_BALANCER_ID (LISTENER_ID1 LISTENE
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID1**: ID of the listener.
 - **LISTENER_ID2**: ID of the listener.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1238,8 +1242,8 @@ ibmcloud is load-balancer-listener-update LOAD_BALANCER_ID LISTENER_ID [--protoc
 - **--default-pool**: ID of the default pool.
 - **--connection-limit**: The maximum number of connections of the listener.
 - **--certificate-instance-crn**: CRN of the certificate instance. Required when protocol is **https**.
-- **--accept-proxy-protocol**: If set to true, proxy protocol will be enabled for this listener. Only supported for application load balancers. One of: **false**, **true**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--accept-proxy-protocol**: If set to true, proxy protocol is enabled for this listener. Only supported for application load balancers. One of: **false**, **true**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1269,7 +1273,7 @@ ibmcloud is load-balancer-listener-policies LOAD_BALANCER_ID LISTENER_ID [--outp
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1289,7 +1293,7 @@ ibmcloud is load-balancer-listener-policy LOAD_BALANCER_ID LISTENER_ID POLICY_ID
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID**: ID of the policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1300,7 +1304,7 @@ ibmcloud is load-balancer-listener-policy LOAD_BALANCER_ID LISTENER_ID POLICY_ID
 Create a load balancer listener policy.
 
 ```
-ibmcloud is load-balancer-listener-policy-create LOAD_BALANCER_ID LISTENER_ID --priority PRIORITY (--action forward | redirect | reject) [--name NEW_NAME] [--target-id TARGET_ID | (--target-http-status-code TARGET_HTTP_STATUS_CODE --target-url TARGET_URL)] [--rules LISTENER_POLICY_RULES_JSON | @LISTENER_POLICY_RULES_JSON_FILE] [--output JSON] [-q, --quiet]
+ibmcloud is load-balancer-listener-policy-create LOAD_BALANCER_ID LISTENER_ID --priority PRIORITY (--action forward | redirect | reject) [--name NEW_NAME] [(--target-http-status-code TARGET_HTTP_STATUS_CODE --target-url TARGET_URL) | --target-id TARGET_ID] [--rules LISTENER_POLICY_RULES_JSON | @LISTENER_POLICY_RULES_JSON_FILE] [--output JSON] [-q, --quiet]
 ```
 
 #### Command options
@@ -1315,7 +1319,7 @@ ibmcloud is load-balancer-listener-policy-create LOAD_BALANCER_ID LISTENER_ID --
 - **--target-http-status-code**: The HTTP status code in the redirect response, one of [**301**, **302**, **303**, **307**, **308**], specified with **redirect** action.
 - **--target-url**: The redirect target URL, specified with **redirect** action.
 - **--rules**: **LISTENER_POLICY_RULES_JSON** | **@LISTENER_POLICY_RULES_JSON_FILE**, listener policy rules in JSON or JSON file.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1349,7 +1353,7 @@ ibmcloud is load-balancer-listener-policy-delete LOAD_BALANCER_ID LISTENER_ID (P
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID1**: ID of the policy.
 - **POLICY_ID2**: ID of the policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1375,7 +1379,7 @@ ibmcloud is load-balancer-listener-policy-update LOAD_BALANCER_ID LISTENER_ID PO
 - **--target-id**: The unique identifier for this load balancer pool that is specified with **forward** action.
 - **--target-http-status-code**: The HTTP status code in the redirect response, one of [**301**, **302**, **303**, **307**, **308**], specified with **redirect** action.
 - **--target-url**: The redirect target URL, specified with **redirect** action.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1405,7 +1409,7 @@ ibmcloud is load-balancer-listener-policy-rules LOAD_BALANCER_ID LISTENER_ID POL
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID**: ID of the policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1426,7 +1430,7 @@ ibmcloud is load-balancer-listener-policy-rule LOAD_BALANCER_ID LISTENER_ID POLI
 - **LISTENER_ID**: ID of the listener.
 - **POLICY_ID**: ID of the policy.
 - **RULE_ID**: ID of the rule.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1450,7 +1454,7 @@ ibmcloud is load-balancer-listener-policy-rule-create LOAD_BALANCER_ID LISTENER_
 - **--type**: The type of the rule. One of: **header**, **hostname**, **path**.
 - **--value**: Value to match the rule condition.
 - **--field**: HTTP header field. This is applicable only to **header** rule type.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -1480,7 +1484,7 @@ ibmcloud is load-balancer-listener-policy-rule-update LOAD_BALANCER_ID LISTENER_
 - **--type**: The type of the rule. One of: **header**, **hostname**, **path**.
 - **--value**: Value to match the rule condition.
 - **--field**: HTTP header field. This is applicable only to **header** rule type.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -1507,7 +1511,7 @@ ibmcloud is load-balancer-listener-policy-rule-delete LOAD_BALANCER_ID LISTENER_
 - **POLICY_ID**: ID of the policy.
 - **RULE_ID1**: ID of the rule.
 - **RULE_ID2**: ID of the rule.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1526,7 +1530,7 @@ ibmcloud is load-balancer-pools LOAD_BALANCER_ID [--output JSON] [-q, --quiet]
 {: #load-balancer-pools-command-options}
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1545,7 +1549,7 @@ ibmcloud is load-balancer-pool LOAD_BALANCER_ID POOL_ID [--output JSON] [-q, --q
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **POOL_ID**: ID of the pool.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1575,7 +1579,7 @@ ibmcloud is load-balancer-pool-create POOL_NAME LOAD_BALANCER_ID ALGORITHM PROTO
 - **--session-persistence-type**: The session persistence type. One of: **source_ip**.
 - **--proxy-protocol**: The proxy protocol setting for this pool. Only supported for application load balancers. One of: **disabled**, **v1**, **v2**.
 - **--members**: MEMBERS_JSON|@MEMBERS_JSON_FILE, members in JSON or JSON file.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1607,7 +1611,7 @@ ibmcloud is load-balancer-pool-delete LOAD_BALANCER_ID (POOL_ID1 POOL_ID2 ...) [
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **POOL_ID1**: ID of the pool.
 - **POOL_ID2**: ID of the pool.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1638,7 +1642,7 @@ ibmcloud is load-balancer-pool-update LOAD_BALANCER_ID POOL_ID [--algorithm roun
 - **--session-persistence-type**: The session persistence type. One of: **source_ip**, **none**.
 - **--proxy-protocol**: The proxy protocol setting for this pool. Only supported for application load balancers. One of: **disabled**, **v1**, **v2**.
 - **--name**: The new name of the pool.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1668,7 +1672,7 @@ ibmcloud is load-balancer-pool-members LOAD_BALANCER_ID POOL_ID [--output JSON] 
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **POOL_ID**: ID of the pool.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1688,7 +1692,7 @@ ibmcloud is load-balancer-pool-member LOAD_BALANCER_ID POOL_ID MEMBER_ID [--outp
 - **LOAD_BALANCER_ID**: ID of the load balancer.
 - **POOL_ID**: ID of the pool.
 - **MEMBER_ID**: ID of the member.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1710,7 +1714,7 @@ ibmcloud is load-balancer-pool-member-create LOAD_BALANCER_ID POOL_ID PORT TARGE
 - **PORT**: The port number of the running application in the server member.
 - **TARGET**: The IP address of the pool member.
 - **--weight**: Weight of the server member. This option is applicable only when the load balancer algorithm of its pool is **weighted_round_robin**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1739,7 +1743,7 @@ ibmcloud is load-balancer-pool-member-update LOAD_BALANCER_ID POOL_ID MEMBER_ID 
 - **--target-address**: The IP address of the pool member.
 - **--port**: The port number of the application that is running in the server member.
 - **--weight**: Weight of the server member. This option is applicable only when the load balancer algorithm of its pool is **weighted_round_robin**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1766,7 +1770,7 @@ ibmcloud is load-balancer-pool-member-delete LOAD_BALANCER_ID POOL_ID (MEMBER_ID
 - **POOL_ID**: ID of the pool.
 - **MEMBER_ID1**: ID of the member.
 - **MEMBER_ID2**: ID of the member.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1785,7 +1789,7 @@ ibmcloud is load-balancer-statistics LOAD_BALANCER_ID [--output JSON] [-q, --qui
 {: #load-balancer-statistics-command-options}
 
 - **LOAD_BALANCER_ID**: ID of the load balancer.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1806,7 +1810,7 @@ ibmcloud is public-gateways [--output JSON] [-q, --quiet]
 #### Command options
 {: #public-gateways-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1824,7 +1828,7 @@ ibmcloud is public-gateway GATEWAY [--output JSON] [-q, --quiet]
 {: #public-gateway-command-options}
 
 - **GATEWAY**: ID of the public gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1846,7 +1850,7 @@ ibmcloud is public-gateway-create GATEWAY_NAME VPC ZONE_NAME [--floating-ip-id I
 - **ZONE_NAME**: Name of the zone.
 - **--floating-ip-id**: ID of the floating IP bound to the public gateway.
 - **--floating-ip-address**: IP address of the floating IP bound to the public gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1873,7 +1877,7 @@ ibmcloud is public-gateway-update GATEWAY --name NEW_NAME [--output JSON] [-q, -
 
 - **GATEWAY**: ID of the public gateway.
 - **--name**: New name of the public gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -1897,7 +1901,7 @@ ibmcloud is public-gateway-delete (GATEWAY1 GATEWAY2 ...) [--output JSON] [-f, -
 
 - **GATEWAY1**: ID of the public gateway.
 - **GATEWAY2**: ID of the public gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -1919,7 +1923,7 @@ ibmcloud is network-acls [--output JSON] [-q, --quiet]
 #### Command options
 {: #network-acls-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1937,7 +1941,7 @@ ibmcloud is network-acl ACL [--output JSON] [-q, --quiet]
 {: #network-acl-command-options}
 
 - **ACL**: ID of the network ACL.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -1957,7 +1961,7 @@ ibmcloud is network-acl-create ACL_NAME [--rules (RULES_JSON|@RULES_JSON_FILE) |
 - **ACL_NAME**: Name of the network ACL.
 - **--rules**: RULES_JSON|@RULES_JSON_FILE, rules for the ACL in JSON or JSON file.
 - **--source-acl-id**: ID of the network ACL to copy rules from.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -1984,7 +1988,7 @@ ibmcloud is network-acl-update ACL --name NEW_NAME [--output JSON] [-q, --quiet]
 
 - **ACL**: ID of the network ACL.
 - **--name**: New name of the network ACL.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2009,7 +2013,7 @@ ibmcloud is network-acl-delete (ACL1 ACL2 ...) [--output JSON] [-f, --force] [-q
 
 - **ACL1**: ID of the network ACL.
 - **ACL2**: ID of the network ACL.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2028,7 +2032,7 @@ ibmcloud is network-acl-rules ACL [--output JSON] [-q, --quiet]
 {: #network-acl-rules-command-options}
 
 - **ACL**: ID of the network ACL.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2047,7 +2051,7 @@ ibmcloud is network-acl-rule ACL RULE [--output JSON] [-q, --quiet]
 
 - **ACL**: ID of the network ACL.
 - **RULE**: ID of the rule.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2078,7 +2082,7 @@ ibmcloud is network-acl-rule-add ACL ACTION DIRECTION PROTOCOL SOURCE DESTINATIO
 - **--destination-port-min**: Minimum destination port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp** (default: **1**).
 - **--destination-port-max**: Maximum destination port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp** (default: **65535**).
 - **--before-rule-id**: ID of the rule that this rule is inserted before.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2120,7 +2124,7 @@ ibmcloud is network-acl-rule-update ACL RULE [--name NEW_NAME] [--direction inbo
 - **--source-port-max**: Maximum source port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp** (default: **65535**).
 - **--destination-port-min**: Minimum destination port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp** (default: **1**).
 - **--destination-port-max**: Maximum destination port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp** (default: **65535**).
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2150,7 +2154,7 @@ ibmcloud is network-acl-rule-delete ACL (RULE1 RULE2 ...) [--output JSON] [-f, -
 - **ACL**: ID of the network ACL.
 - **RULE1**: ID of the rule.
 - **RULE2**: ID of the rule.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2172,7 +2176,7 @@ ibmcloud is subnets [--output JSON] [-q, --quiet]
 #### Command options
 {: #subnets-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2191,7 +2195,7 @@ ibmcloud is subnet SUBNET [--show-attached] [--output JSON] [-q, --quiet]
 
 - **SUBNET**: ID of the subnet.
 - **--show-attached**: View details of resources (instances, load balancers, VPN gateways) attached to the subnet.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2202,7 +2206,7 @@ ibmcloud is subnet SUBNET [--show-attached] [--output JSON] [-q, --quiet]
 Create a subnet.
 
 ```
-ibmcloud is subnet-create SUBNET_NAME VPC (--ipv4-cidr-block CIDR_BLOCK | (--ipv4-address-count ADDR_COUNT --zone ZONE_NAME)) [--network-acl-id NETWORK_ACL_ID] [--public-gateway-id PUBLIC_GATEWAY_ID] [--output JSON] [-q, --quiet]
+ibmcloud is subnet-create SUBNET_NAME VPC ((--zone ZONE_NAME --ipv4-address-count ADDR_COUNT) | --ipv4-cidr-block CIDR_BLOCK) [--network-acl-id NETWORK_ACL_ID] [--public-gateway-id PUBLIC_GATEWAY_ID] [--output JSON] [-q, --quiet]
 ```
 
 #### Command options
@@ -2215,7 +2219,7 @@ ibmcloud is subnet-create SUBNET_NAME VPC (--ipv4-cidr-block CIDR_BLOCK | (--ipv
 - **--zone**: Name of the zone.
 - **--network-acl-id**: The ID of the network ACL.
 - **--public-gateway-id**: The ID of the public gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2245,7 +2249,7 @@ ibmcloud is subnet-update SUBNET [--name NEW_NAME] [--network-acl-id NETWORK_ACL
 - **--name**: New name of the subnet.
 - **--network-acl-id**: The ID of the network ACL.
 - **--public-gateway-id**: The ID of the public gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2272,7 +2276,7 @@ ibmcloud is subnet-delete (SUBNET1 SUBNET2 ...) [--output JSON] [-f, --force] [-
 
 - **SUBNET1**: ID of the subnet.
 - **SUBNET2**: ID of the subnet.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2308,7 +2312,7 @@ ibmcloud is subnet-public-gateway SUBNET [--output JSON] [-q, --quiet]
 {: #subnet-public-gateway-command-options}
 
 - **SUBNET**: ID of the subnet.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2332,7 +2336,7 @@ ibmcloud is security-groups [--resource-group-id RESOURCE_GROUP_ID | --resource-
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2350,7 +2354,7 @@ ibmcloud is security-group GROUP [--output JSON] [-q, --quiet]
 {: #security-group-command-options}
 
 - **GROUP**: ID of the security group.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2371,7 +2375,7 @@ ibmcloud is security-group-create GROUP_NAME VPC [--resource-group-id RESOURCE_G
 - **VPC**: ID of the VPC.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2398,7 +2402,7 @@ ibmcloud is security-group-update GROUP [--name NEW_NAME] [--output JSON] [-q, -
 
 - **GROUP**: ID of the security group.
 - **--name**: New name of the security group.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2422,7 +2426,7 @@ ibmcloud is security-group-delete (GROUP1 GROUP2 ...) [--output JSON] [-f, --for
 
 - **GROUP1**: ID of the security group.
 - **GROUP2**: ID of the security group.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2441,7 +2445,7 @@ ibmcloud is security-group-network-interfaces GROUP [--output JSON] [-q, --quiet
 {: #security-group-network-interfaces-command-options}
 
 - **GROUP**: ID of the security group.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2460,7 +2464,7 @@ ibmcloud is security-group-network-interface GROUP NIC [--output JSON] [-q, --qu
 
 - **GROUP**: ID of the security group.
 - **NIC**: ID of the network interface.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2479,7 +2483,7 @@ ibmcloud is security-group-network-interface-add GROUP NIC [--output JSON] [-q, 
 
 - **GROUP**: ID of the security group.
 - **NIC**: ID of the network interface.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2504,7 +2508,7 @@ ibmcloud is security-group-network-interface-remove GROUP (NIC1 NIC2 ...) [--out
 - **GROUP**: ID of the security group.
 - **NIC1**: ID of the network interface.
 - **NIC2**: ID of the network interface.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2523,7 +2527,7 @@ ibmcloud is security-group-rules GROUP [--output JSON] [-q, --quiet]
 {: #security-group-rules-command-options}
 
 - **GROUP**: ID of the security group.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2542,7 +2546,7 @@ ibmcloud is security-group-rule GROUP RULE_ID [--output JSON] [-q, --quiet]
 
 - **GROUP**: ID of the security group.
 - **RULE_ID**: ID of the security group rule.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2567,7 +2571,7 @@ ibmcloud is security-group-rule-add GROUP DIRECTION PROTOCOL [--remote REMOTE_AD
 - **--icmp-code**: ICMP traffic code to allow. Valid values from **0** to **255**. This option is specified only when protocol is set to **icmp**. If unspecified, all codes are allowed.
 - **--port-min**: Minimum port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp**. If unspecified, all ports are allowed (default: **1**).
 - **--port-max**: Maximum port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp**. If unspecified, all ports are allowed (default: **65535**).
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2600,7 +2604,7 @@ ibmcloud is security-group-rule-update GROUP RULE_ID [--direction inbound | outb
 - **--icmp-code**: ICMP traffic code to allow. Valid values from **0** to **255**. This option is specified only when protocol is set to **icmp**. If unspecified, all codes are allowed.
 - **--port-min**: Minimum port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp**. If unspecified, all ports are allowed (default: **1**).
 - **--port-max**: Maximum port number. Valid values are from **1** to **65535**. This option is specified only when protocol is set to **tcp** or **udp**. If unspecified, all ports are allowed (default: **65535**).
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2629,7 +2633,7 @@ ibmcloud is security-group-rule-delete GROUP (RULE_ID1 RULE_ID2 ...) [--output J
 - **GROUP**: ID of the security group.
 - **RULE_ID1**: ID of the security group rule.
 - **RULE_ID2**: ID of the security group rule.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2655,7 +2659,7 @@ ibmcloud is vpcs [--resource-group-id RESOURCE_GROUP_ID | --resource-group-name 
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
 - **--classic-access**: This flag lists VPCs that have classic access enabled. If unspecified, it returns all VPCs with and without classic access enabled. One of: **true**, **false**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2674,7 +2678,7 @@ ibmcloud is vpc VPC [--show-attached] [--output JSON] [-q, --quiet]
 
 - **VPC**: ID of the VPC.
 - **--show-attached**: View details of resources (subnets, VPC routes and address prefix) attached to this VPC.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2696,7 +2700,7 @@ ibmcloud is vpc-create VPC_NAME [--classic-access] [--address-prefix-management 
 - **--address-prefix-management**: This flag indicates if a default address prefix is automatically created for each zone in this VPC. If **manual**, this VPC is created with no default address prefixes. One of: **auto**, **manual**. (default: **auto**).
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -2723,7 +2727,7 @@ ibmcloud is vpc-update VPC --name NEW_NAME [--output JSON] [-q, --quiet]
 
 - **VPC**: ID of the VPC.
 - **--name**: New name of the VPC.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2747,7 +2751,7 @@ ibmcloud is vpc-delete (VPC1 VPC2 ...) [--output JSON] [-f, --force] [-q, --quie
 
 - **VPC1**: ID of the VPC.
 - **VPC2**: ID of the VPC.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2766,7 +2770,7 @@ ibmcloud is vpc-default-security-group VPC [--output JSON] [-q, --quiet]
 {: #vpc-default-security-group-command-options}
 
 - **VPC**: ID of the VPC.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2785,7 +2789,7 @@ ibmcloud is vpc-address-prefix VPC PREFIX [--output JSON] [-q, --quiet]
 
 - **VPC**: ID of the VPC.
 - **PREFIX**: ID of the VPC address prefix.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2805,9 +2809,9 @@ ibmcloud is vpc-address-prefix-create PREFIX_NAME VPC ZONE_NAME CIDR [--default 
 - **PREFIX_NAME**: Name of the VPC address prefix.
 - **VPC**: ID of the VPC.
 - **ZONE_NAME**: Name of the zone.
-- **CIDR**: The CIDR block for this address prefix. It must not overlap with any existing address prefixes in the VPC, or the reserved CIDR blocks 169.254.0.0/16 and 161.26.0.0/16.
+- **CIDR**: The IPv4 range of the address prefix, expressed in CIDR format. It must not overlap with any existing address prefixes in the VPC, or the reserved CIDR blocks 127.0.0.0/8, 161.26.0.0/16, 166.8.0.0/14, 169.254.0.0/16 and 224.0.0.0/4. The prefix length of the address prefix's CIDR must be between `/9` (8,388,608 addresses) and `/29` (eight addresses).
 - **--default**: This flag indicates whether this is the default prefix for this zone in this VPC. One of: **false**, **true**. (default: **false**).
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2832,7 +2836,7 @@ ibmcloud is vpc-address-prefix-delete VPC (PREFIX1 PREFIX2 ...) [--output JSON] 
 - **VPC**: ID of the VPC.
 - **PREFIX1**: ID of the VPC address prefix.
 - **PREFIX2**: ID of the VPC address prefix.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -2854,7 +2858,7 @@ ibmcloud is vpc-address-prefix-update VPC PREFIX [--name NEW_NAME] [--default fa
 - **PREFIX**: ID of the VPC address prefix.
 - **--name**: New name of the address prefix.
 - **--default**: This flag indicates whether this is the default prefix for this zone in this VPC. One of: **false**, **true**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2877,7 +2881,7 @@ ibmcloud is vpc-address-prefixes VPC [--output JSON] [-q, --quiet]
 {: #vpc-address-prefixes-command-options}
 
 - **VPC**: ID of the VPC.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2895,7 +2899,7 @@ ibmcloud is vpc-routes VPC [--output JSON] [-q, --quiet]
 {: #vpc-routes-command-options}
 
 - **VPC**: ID of the VPC.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2914,7 +2918,7 @@ ibmcloud is vpc-route VPC ROUTE [--output JSON] [-q, --quiet]
 
 - **VPC**: ID of the VPC.
 - **ROUTE**: ID of the VPC route.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -2936,7 +2940,7 @@ ibmcloud is vpc-route-create ROUTE_NAME VPC --zone ZONE_NAME --destination DESTI
 - **--zone**: Name of the zone.
 - **--destination**: The destination CIDR of the route.
 - **--next-hop-ip**: The IP address of the next hop to which to route packets.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2961,7 +2965,7 @@ ibmcloud is vpc-route-update VPC ROUTE --name NEW_NAME [--output JSON] [-q, --qu
 - **VPC**: ID of the VPC.
 - **ROUTE**: ID of the VPC route.
 - **--name**: New name of the route.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -2986,7 +2990,7 @@ ibmcloud is vpc-route-delete VPC (ROUTE1 ROUTE2 ...) [--output JSON] [-f, --forc
 - **VPC**: ID of the VPC.
 - **ROUTE1**: ID of the VPC route.
 - **ROUTE2**: ID of the VPC route.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3012,7 +3016,7 @@ ibmcloud is regions [--output JSON] [-q, --quiet]
 #### Command options
 {: #regions-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3030,7 +3034,7 @@ ibmcloud is region REGION_NAME [--output JSON] [-q, --quiet]
 {: #region-command-options}
 
 - **REGION_NAME**: Name of the region.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3051,7 +3055,7 @@ ibmcloud is zones [--output JSON] [-q, --quiet]
 #### Command options
 {: #zones-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3069,7 +3073,7 @@ ibmcloud is zone ZONE_NAME [--output JSON] [-q, --quiet]
 {: #zone-command-options}
 
 - **ZONE_NAME**: Name of the zone.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3097,7 +3101,7 @@ ibmcloud is ike-policies [--resource-group-id RESOURCE_GROUP_ID | --resource-gro
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3115,7 +3119,7 @@ ibmcloud is ike-policy IKE_POLICY_ID [--output JSON] [-q, --quiet]
 {: #ike-policy-command-options}
 
 - **IKE_POLICY_ID**: ID of the IKE policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3140,7 +3144,7 @@ ibmcloud is ike-policy-create IKE_POLICY_NAME AUTHENTICATION_ALGORITHM DH_GROUP 
 - **--key-lifetime**: The key lifetime in seconds. Maximum: **86400**, Minimum: **1800**. (default: **28800**).
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3167,7 +3171,7 @@ ibmcloud is ike-policy-delete (IKE_POLICY_ID1 IKE_POLICY_ID2 ...) [--output JSON
 
 - **IKE_POLICY_ID1**: ID of the IKE policy.
 - **IKE_POLICY_ID2**: ID of the IKE policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3192,7 +3196,7 @@ ibmcloud is ike-policy-update IKE_POLICY_ID [--name NEW_NAME] [--authentication-
 - **--encryption-algorithm**: The encryption algorithm. One of: **triple_des**, **aes128**, **aes256**.
 - **--ike-version**: The IKE protocol version. One of: **1**, **2**.
 - **--key-lifetime**: The key lifetime in seconds. Maximum: **86400**, Minimum: **1800**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3220,7 +3224,7 @@ ibmcloud is ike-policy-connections IKE_POLICY_ID [--output JSON] [-q, --quiet]
 {: #ike-policy-connections-command-options}
 
 - **IKE_POLICY_ID**: ID of the IKE policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3244,7 +3248,7 @@ ibmcloud is ipsec-policies [--resource-group-id RESOURCE_GROUP_ID | --resource-g
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3262,7 +3266,7 @@ ibmcloud is ipsec-policy IPSEC_POLICY_ID [--output JSON] [-q, --quiet]
 {: #ipsec-policy-command-options}
 
 - **IPSEC_POLICY_ID**: ID of the IPsec policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3286,7 +3290,7 @@ ibmcloud is ipsec-policy-create IPSEC_POLICY_NAME AUTHENTICATION_ALGORITHM ENCRY
 - **--key-lifetime**: The key lifetime in seconds. Maximum: **86400**, Minimum: **1800**. (default: **3600**).
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3313,7 +3317,7 @@ ibmcloud is ipsec-policy-delete (IPSEC_POLICY_ID1 IPSEC_POLICY_ID2 ...) [--outpu
 
 - **IPSEC_POLICY_ID1**: ID of the IPsec policy.
 - **IPSEC_POLICY_ID2**: ID of the IPsec policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3337,7 +3341,7 @@ ibmcloud is ipsec-policy-update IPSEC_POLICY_ID [--name NEW_NAME] [--authenticat
 - **--pfs**: Perfect Forward Secrecy. One of: **disabled**, **group_2**, **group_5**, **group_14**.
 - **--encryption-algorithm**: The encryption algorithm. One of: **triple_des**, **aes128**, **aes256**.
 - **--key-lifetime**: The key lifetime in seconds. Maximum: **86400**, Minimum: **1800**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3364,7 +3368,7 @@ ibmcloud is ipsec-policy-connections IPSEC_POLICY_ID [--output JSON] [-q, --quie
 {: #ipsec-policy-connections-command-options}
 
 - **IPSEC_POLICY_ID**: ID of the IPsec policy.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3388,7 +3392,7 @@ ibmcloud is vpn-gateways [--resource-group-id RESOURCE_GROUP_ID | --resource-gro
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3406,7 +3410,7 @@ ibmcloud is vpn-gateway VPN_GATEWAY_ID [--output JSON] [-q, --quiet]
 {: #vpn-gateway-command-options}
 
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3427,7 +3431,7 @@ ibmcloud is vpn-gateway-create VPN_GATEWAY_NAME SUBNET [--resource-group-id RESO
 - **SUBNET**: ID of the subnet.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3453,7 +3457,7 @@ ibmcloud is vpn-gateway-delete (VPN_GATEWAY_ID1 VPN_GATEWAY_ID2 ...) [--output J
 
 - **VPN_GATEWAY_ID1**: ID of the VPN gateway.
 - **VPN_GATEWAY_ID2**: ID of the VPN gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3473,7 +3477,7 @@ ibmcloud is vpn-gateway-update VPN_GATEWAY_ID [--name NEW_NAME] [--output JSON] 
 
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
 - **--name**: New name of the VPN gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -3496,7 +3500,7 @@ ibmcloud is vpn-gateway-connections VPN_GATEWAY_ID [--output JSON] [-q, --quiet]
 {: #vpn-gateway-connections-command-options}
 
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3525,7 +3529,7 @@ ibmcloud is vpn-gateway-connection-create CONNECTION_NAME VPN_GATEWAY_ID PEER_AD
 - **--ipsec-policy**: ID of the IPsec policy.
 - **--local-cidr**: Local CIDR for the resource.
 - **--peer-cidr**: Peer CIDRs for the resource.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3555,7 +3559,7 @@ ibmcloud is vpn-gateway-connection VPN_GATEWAY_ID (CONNECTION_ID1 CONNECTION_ID2
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
 - **CONNECTION_ID1**: ID of the VPN connection.
 - **CONNECTION_ID2**: ID of the VPN connection.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3575,7 +3579,7 @@ ibmcloud is vpn-gateway-connection-delete VPN_GATEWAY_ID (CONNECTION_ID1 CONNECT
 - **VPN_GATEWAY_ID**: ID of the VPN gateway.
 - **CONNECTION_ID1**: ID of the VPN connection.
 - **CONNECTION_ID2**: ID of the VPN connection.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3604,7 +3608,7 @@ ibmcloud is vpn-gateway-connection-update VPN_GATEWAY_ID CONNECTION_ID [--admin-
 - **--peer-address**: The IP address of the peer VPN gateway.
 - **--psk**: The preshared key.
 - **--name**: New name of the connection.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -3651,7 +3655,7 @@ ibmcloud is vpn-gateway-connection-local-cidr-add VPN_GATEWAY_ID CONNECTION_ID P
 - **CONNECTION_ID**: ID of the VPN connection.
 - **PREFIX_ADDRESS**: The prefix address part of the CIDR.
 - **PREFIX_LENGTH**: The prefix length part of the CIDR.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3693,7 +3697,7 @@ ibmcloud is vpn-gateway-connection-peer-cidr-add VPN_GATEWAY_ID CONNECTION_ID PR
 - **CONNECTION_ID**: ID of the VPN connection.
 - **PREFIX_ADDRESS**: The prefix address part of the CIDR.
 - **PREFIX_LENGTH**: The prefix length part of the CIDR.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3719,7 +3723,7 @@ ibmcloud is volume VOLUME [--output JSON] [-q, --quiet]
 {: #volume-command-options}
 
 - **VOLUME**: ID of the volume.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3739,7 +3743,7 @@ ibmcloud is volumes [--resource-group-id RESOURCE_GROUP_ID | --resource-group-na
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
 - **--all-resource-groups**: Query all resource groups.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3764,7 +3768,7 @@ ibmcloud is volume-create VOLUME_NAME PROFILE_NAME ZONE_NAME [--capacity CAPACIT
 - **--encryption-key**: The CRN of the Key Management Service root key.
 - **--resource-group-id**: ID of the resource group. This option is mutually exclusive with **--resource-group-name**.
 - **--resource-group-name**: Name of the resource group. This option is mutually exclusive with **--resource-group-id**.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Examples
@@ -3794,7 +3798,7 @@ ibmcloud is volume-delete (VOLUME1 VOLUME2 ...) [--output JSON] [-f, --force] [-
 
 - **VOLUME1**: ID of the volume.
 - **VOLUME2**: ID of the volume.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **--force, -f**: Force the operation without confirmation.
 - **-q, --quiet**: Suppress verbose output.
 
@@ -3814,7 +3818,7 @@ ibmcloud is volume-update VOLUME --name NEW_NAME [--output JSON] [-q, --quiet]
 
 - **VOLUME**: ID of the volume.
 - **--name**: New name of the volume.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 #### Example
@@ -3841,7 +3845,7 @@ ibmcloud is volume-profile PROFILE_NAME [--output JSON] [-q, --quiet]
 {: #volume-profile-command-options}
 
 - **PROFILE_NAME**: Name of the profile.
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
@@ -3858,7 +3862,7 @@ ibmcloud is volume-profiles [--output JSON] [-q, --quiet]
 #### Command options
 {: #volume-profiles-command-options}
 
-- **--output**: Specify output format, only JSON is supported now. One of: **JSON**.
+- **--output**: Specify output format, only JSON is supported. One of: **JSON**.
 - **-q, --quiet**: Suppress verbose output.
 
 ---
